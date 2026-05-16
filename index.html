@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>صحة مجتمع | الرئيسية</title>
+    <title>بوصلة صحة المجتمع | الرئيسية</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +15,12 @@
                 extend: {
                     colors: {
                         medical: {
-                            teal: '#00897b',
-                            'teal-light': '#e0f2f1',
-                            'teal-dark': '#00695c',
-                            blue: '#0277bd',
-                            'blue-light': '#e3f2fd',
+                            teal: '#00BFFF',
+                            'teal-light': '#E0F7FF',
+                            'teal-dark': '#006080',
+                            blue: '#0082AD',
+                            'blue-light': '#00A1D6',
+                            'blue-deep': '#004157',
                             grey: '#f5f5f5',
                         }
                     },
@@ -65,9 +66,9 @@
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center gap-2 group transition-all">
                         <div class="bg-medical-teal-light p-2 rounded-lg group-hover:bg-medical-teal transition-colors">
-                            <i data-lucide="heart" class="w-6 h-6 text-medical-teal group-hover:text-white"></i>
+                            <i data-lucide="compass" class="w-6 h-6 text-medical-teal group-hover:text-white"></i>
                         </div>
-                        <span class="text-xl font-bold text-medical-teal-dark tracking-tight">صحة مجتمع</span>
+                        <span class="text-xl font-bold text-medical-teal-dark tracking-tight">بوصلة صحة المجتمع</span>
                     </a>
                 </div>
 
@@ -77,11 +78,11 @@
                         الرئيسية
                         <span class="absolute -bottom-1 left-0 right-0 h-0.5 bg-medical-teal rounded-full"></span>
                     </a>
-                    <a href="#medical-content" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
-                        المحتوي الطبي
+                    <a href="#health-topics" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الموضوعات الصحية
                     </a>
-                    <a href="#footer" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
-                        من نحن
+                    <a href="#social-awareness" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الموضوعات الاجتماعية
                     </a>
                 </div>
 
@@ -98,46 +99,46 @@
         <div id="mobile-menu" class="md:hidden bg-white border-b border-medical-teal-light">
             <div class="px-4 pt-2 pb-6 space-y-1">
                 <a href="index.html" class="block px-3 py-4 rounded-md text-base font-medium bg-medical-teal-light text-medical-teal">الرئيسية</a>
-                <a href="#medical-content" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">المحتوي الطبي</a>
-                <a href="#footer" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">من نحن</a>
+                <a href="#health-topics" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الصحية</a>
+                <a href="#social-awareness" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الاجتماعية</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative min-h-[90vh] flex items-center overflow-hidden bg-slate-900">
+    <section class="relative min-h-screen md:min-h-[90vh] flex items-center overflow-hidden bg-slate-900">
         <!-- Background Image with Optimized Blur -->
         <div class="absolute inset-0 z-0">
             <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&q=70&w=1280" 
-                 alt="Medical Office Background" 
-                 class="w-full h-full object-cover blur-[2px] opacity-60" 
+                 alt="Medical Lobby Background" 
+                 class="w-full h-full object-cover blur-[3px] opacity-80" 
                  referrerPolicy="no-referrer">
-            <!-- Dark Overlay with minimal blur -->
-            <div class="absolute inset-0 bg-slate-950/30 backdrop-blur-[1px]"></div>
+            <!-- Dark Blue Overlay (More transparent) -->
+            <div class="absolute inset-0 bg-medical-blue-deep/40 backdrop-blur-[1.5px]"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20 md:py-32">
                 <div class="max-w-3xl slide-up">
                     <div class="flex flex-wrap items-center gap-3 mb-8">
-                        <span class="px-4 py-1.5 rounded-full bg-medical-teal text-white text-sm font-bold">مرحباً بكم في صحة مجتمع</span>
-                        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/10 text-white text-sm font-medium">
-                            <i data-lucide="shield-check" class="w-4 h-4 text-medical-teal"></i>
-                            <span>معلومات طبية موثوقة ومعتمدة</span>
-                        </div>
+                        <span class="px-4 py-1.5 rounded-full bg-medical-teal text-white text-sm font-bold uppercase tracking-wider">بوصلة صحة المجتمع</span>
                     </div>
                     <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-8">
-                    معاً نحو <span class="text-medical-teal-light">مجتمع أكثر وعياً</span> وصحة
+                    نرشدك نحو <span class="text-medical-teal">مجتمع واعي</span> وحياة أفضل
                 </h1>
-                <p class="text-xl text-slate-100 mb-6 leading-relaxed max-w-2xl">
-                    منصتكم الموثوقة للتثقيف الصحي حول الأمراض المزمنة. نحن هنا لنرشدكم نحو حياة أفضل من خلال المعرفة والوقاية.
+                <p class="text-xl text-slate-100 mb-10 leading-relaxed max-w-2xl">
+                    الصفحة تهدف إلى تعزيز ونشر الوعي الصحي والمجتمعي بين جميع أفراد المجتمع.
                 </p>
-                <div class="flex items-center gap-2 md:gap-3 mb-10 text-medical-teal-light font-medium bg-white/5 w-fit px-4 md:px-5 py-3 rounded-xl border border-white/10 backdrop-blur-sm shadow-xl max-w-full overflow-hidden">
-                    <i data-lucide="graduation-cap" class="w-5 h-5 md:w-6 md:h-6 shrink-0"></i>
-                    <span class="text-xs sm:text-sm md:text-lg whitespace-nowrap">تحت إشراف الأستاذ الدكتور / جهان مصطفي</span>
+
+                <div class="flex items-center gap-2 md:gap-3 mb-10 text-white font-medium bg-white/10 w-fit px-4 md:px-5 py-3 rounded-xl border border-white/10 backdrop-blur-sm shadow-xl max-w-full overflow-hidden">
+                    <i data-lucide="graduation-cap" class="w-5 h-5 md:w-6 md:h-6 shrink-0 text-medical-teal"></i>
+                    <div class="flex flex-col text-right">
+                        <span class="text-sm md:text-lg font-bold">تحت إشراف / أ.د جيهان محمد</span>
+                        <span class="text-xs md:text-sm text-slate-300">أستاذ تمريض الإدارة بكلية التمريض - جامعة العاصمة</span>
+                    </div>
                 </div>
                 <div class="flex flex-wrap gap-4">
-                    <a href="#medical-content" class="px-8 py-4 bg-medical-teal text-white rounded-lg font-bold hover:bg-medical-teal-dark transition-all duration-300 shadow-lg shadow-medical-teal/20 flex items-center gap-2 group">
-                        اكتشف المزيد
+                    <a href="#health-topics" class="px-8 py-4 bg-medical-teal text-white rounded-lg font-bold hover:bg-medical-teal-dark transition-all duration-300 shadow-lg shadow-medical-teal/20 flex items-center gap-2 group">
+                        استكشف الموضوعات الصحية
                         <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition-transform"></i>
                     </a>
                 </div>
@@ -145,213 +146,224 @@
         </div>
     </section>
 
-    <!-- Mission & Features Grid -->
-    <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
-        <div class="text-center max-w-3xl mx-auto mb-24 slide-up">
-            <h2 class="text-3xl md:text-5xl font-bold text-medical-teal-dark mb-6">رؤيتنا ورسالتنا</h2>
-            <p class="text-slate-600 leading-relaxed text-xl">
-                نسعى لتبسيط المفاهيم الطبية المعقدة وتقديمها في قالب سهل الفهم للجميع، لنساهم في بناء مجتمع يتمتع بالصحة والعافية ويدرك أهمية الوقاية.
+    <!-- Health Topics Section -->
+    <section id="health-topics" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 scroll-mt-48">
+        <div class="text-center max-w-3xl mx-auto mb-20 slide-up">
+            <span class="text-medical-teal font-bold uppercase tracking-widest text-sm mb-4 block">الوقاية والعلاج</span>
+            <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 font-primary">الموضوعات الصحية</h2>
+            <p class="text-slate-600 leading-relaxed text-lg">
+                نقدم لكم أدلة شاملة ومبسطة حول أكثر الأمراض المزمنة شيوعاً، وكيفية التعامل مع حالات الطوارئ.
             </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <div class="bg-white p-12 rounded-2xl border border-medical-teal-light shadow-sm hover-lift text-center group">
-                <div class="inline-flex p-6 bg-medical-teal-light rounded-xl mb-8 group-hover:bg-medical-teal transition-colors">
-                    <i data-lucide="shield-check" class="w-10 h-10 text-medical-teal group-hover:text-white"></i>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Hypertension -->
+            <a href="hypertension.html" class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover-lift group border-b-4 border-b-medical-blue transition-all">
+                <div class="inline-flex p-4 bg-medical-teal-light rounded-xl mb-6 group-hover:bg-medical-blue group-hover:text-white transition-all text-medical-blue">
+                    <i data-lucide="activity" class="w-8 h-8"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">معلومات موثوقة</h3>
-                <p class="text-slate-600 leading-relaxed text-lg">نحرص على تقديم محتوى طبي دقيق ومبسط مبني على أسس علمية حديثة موثقة.</p>
-            </div>
-            
-            <div class="bg-white p-12 rounded-2xl border border-medical-teal-light shadow-sm hover-lift text-center group">
-                <div class="inline-flex p-6 bg-medical-teal-light rounded-xl mb-8 group-hover:bg-medical-teal transition-colors">
-                    <i data-lucide="book-open" class="w-10 h-10 text-medical-teal group-hover:text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">تثقيف مستمر</h3>
-                <p class="text-slate-600 leading-relaxed text-lg">هدفنا هو رفع الوعي الصحي لدى جميع فئات المجتمع من خلال محتوى تعليمي متنوع.</p>
-            </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">دليل ضغط الدم</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">كل ما تحتاجه للتحكم في ضغط الدم وحماية قلبك.</p>
+                <span class="flex items-center gap-2 text-medical-teal text-sm font-bold">
+                    اقرأ المزيد 
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                </span>
+            </a>
 
-            <div class="bg-white p-12 rounded-2xl border border-medical-teal-light shadow-sm hover-lift text-center group">
-                <div class="inline-flex p-6 bg-medical-teal-light rounded-xl mb-8 group-hover:bg-medical-teal transition-colors">
-                    <i data-lucide="activity" class="w-10 h-10 text-medical-teal group-hover:text-white"></i>
+            <!-- Diabetes -->
+            <a href="diabetes.html" class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover-lift group border-b-4 border-b-medical-teal transition-all">
+                <div class="inline-flex p-4 bg-medical-teal-light rounded-xl mb-6 group-hover:bg-medical-teal group-hover:text-white transition-all text-medical-teal">
+                    <i data-lucide="droplets" class="w-8 h-8"></i>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-4">صحتك أولويتنا</h3>
-                <p class="text-slate-600 leading-relaxed text-lg">نركز على الأمراض المزمنة لتقليل مضاعفاتها وتحسين نمط المعيشة للمرضى.</p>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">دليل السكري</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">فهم كيفية إدارة مستويات السكر والتعايش بذكاء.</p>
+                <span class="flex items-center gap-2 text-medical-teal text-sm font-bold">
+                    اقرأ المزيد 
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                </span>
+            </a>
+
+            <!-- Obesity -->
+            <a href="obesity.html" class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover-lift group border-b-4 border-b-orange-500 transition-all">
+                <div class="inline-flex p-4 bg-orange-50 rounded-xl mb-6 group-hover:bg-orange-500 group-hover:text-white transition-all text-orange-500">
+                    <i data-lucide="scale" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">السمنة والوزن</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">نصائح غذائية ورياضية للوصول للوزن المثالي والصحي.</p>
+                <span class="flex items-center gap-2 text-orange-500 text-sm font-bold">
+                    اقرأ المزيد 
+                    <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                </span>
+            </a>
+
+            <!-- First Aid -->
+            <div class="bg-white p-8 rounded-xl border border-slate-100 shadow-sm hover-lift group border-b-4 border-b-red-500 transition-all">
+                <div class="inline-flex p-4 bg-red-50 rounded-xl mb-6 group-hover:bg-red-500 group-hover:text-white transition-all text-red-500">
+                    <i data-lucide="cross" class="w-8 h-8"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 mb-3">الإسعافات الأولية</h3>
+                <p class="text-slate-600 text-sm leading-relaxed mb-6">دليلك السريع للتعامل مع الحالات الطارئة بكفاءة.</p>
+                <span class="text-slate-400 text-sm font-medium italic">قريباً</span>
             </div>
         </div>
     </section>
 
     <!-- Social Awareness Section -->
-    <section id="social-awareness" class="bg-slate-50 py-32 border-y border-medical-teal-light/30">
+    <section id="social-awareness" class="bg-slate-50 py-32 border-y border-slate-200 scroll-mt-48">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-20 slide-up">
-                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">التوعية بالظواهر الاجتماعية</h2>
+                <span class="text-medical-blue font-bold uppercase tracking-widest text-sm mb-4 block">بناء مجتمع أقوى</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">الموضوعات الاجتماعية</h2>
                 <p class="text-slate-600 leading-relaxed text-lg">
-                    الصحة ليست جسدية فقط، بل نفسية واجتماعية أيضاً. نسلط الضوء على أهم القضايا التي تؤثر على تماسك المجتمع وصحة أفراده.
+                    نسلط الضوء على القضايا الاجتماعية المؤثرة، لنساهم في بناء علاقات إنسانية أكثر صحة وتوازناً.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Bullying -->
-                <div class="bg-white p-8 rounded-xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up">
+                <!-- Violence -->
+                <div class="bg-white p-10 rounded-xl border border-slate-100 shadow-sm hover-lift group relative overflow-hidden">
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="p-4 bg-orange-50 rounded-xl group-hover:bg-orange-100 transition-colors">
-                            <i data-lucide="shield-off" class="w-6 h-6 text-orange-600"></i>
+                        <div class="p-4 bg-purple-50 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all">
+                            <i data-lucide="heart-off" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900">التنمر</h3>
+                        <h3 class="text-2xl font-bold text-slate-900">العنف</h3>
                     </div>
-                    <p class="text-slate-600 leading-relaxed mb-6">فهم أشكال التنمر وآثاره النفسية العميقة وكيفية بناء بيئة آمنة وداعمة للجميع.</p>
-                    <a href="#" class="inline-flex items-center gap-2 text-medical-teal font-bold hover:gap-3 transition-all group/btn">
-                        معرفة المزيد
-                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Addiction -->
-                <div class="bg-white p-8 rounded-xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up" style="animation-delay: 0.1s;">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-4 bg-red-50 rounded-xl group-hover:bg-red-100 transition-colors">
-                            <i data-lucide="alert-triangle" class="w-6 h-6 text-red-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900">الإدمان</h3>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed mb-6">التوعية بمخاطر الإدمان السلوكي والمادي وسبل الوقاية والتعافي والعودة للحياة الطبيعية.</p>
-                    <a href="#" class="inline-flex items-center gap-2 text-medical-teal font-bold hover:gap-3 transition-all group/btn">
-                        معرفة المزيد
-                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Domestic Violence -->
-                <div class="bg-white p-8 rounded-xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up" style="animation-delay: 0.2s;">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-4 bg-purple-50 rounded-xl group-hover:bg-purple-100 transition-colors">
-                            <i data-lucide="home" class="w-6 h-6 text-purple-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900">العنف الأسري</h3>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed mb-6">تعزيز الروابط الأسرية الصحية والتعريف بحقوق الأفراد وكيفية التعامل مع النزاعات بسلام.</p>
-                    <a href="#" class="inline-flex items-center gap-2 text-medical-teal font-bold hover:gap-3 transition-all group/btn">
-                        معرفة المزيد
-                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Suicide Prevention -->
-                <div class="bg-white p-8 rounded-xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up" style="animation-delay: 0.3s;">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-4 bg-blue-50 rounded-xl group-hover:bg-blue-100 transition-colors">
-                            <i data-lucide="life-buoy" class="w-6 h-6 text-blue-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900">الصحة النفسية</h3>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed mb-6">نشر الوعي حول الاكتئاب ومنع الانتحار، وتوفير الدعم النفسي لمن يمرون بأزمات حادة.</p>
-                    <a href="#" class="inline-flex items-center gap-2 text-medical-teal font-bold hover:gap-3 transition-all group/btn">
-                        معرفة المزيد
-                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
-                    </a>
-                </div>
-
-                <!-- Pornography Awareness -->
-                <div class="bg-white p-8 rounded-xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up" style="animation-delay: 0.4s;">
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="p-4 bg-indigo-50 rounded-xl group-hover:bg-indigo-100 transition-colors">
-                            <i data-lucide="eye-off" class="w-6 h-6 text-indigo-600"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-slate-900">مخاطر الإباحية</h3>
-                    </div>
-                    <p class="text-slate-600 leading-relaxed mb-6">التوعية بالآثار السلبية للمحتوى الإباحي على الدماغ والعلاقات الاجتماعية وسبل التحرر منها.</p>
-                    <a href="#" class="inline-flex items-center gap-2 text-medical-teal font-bold hover:gap-3 transition-all group/btn">
-                        معرفة المزيد
-                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
-                    </a>
+                    <p class="text-slate-600 leading-relaxed text-lg mb-8">فهم جذور العنف وآثاره النفسية، وكيفية تعزيز ثقافة الحوار والتسامح في مجتمعاتنا.</p>
+                    <span class="text-slate-400 text-sm font-medium italic">قريباً</span>
                 </div>
 
                 <!-- Divorce -->
-                <div class="bg-white p-8 rounded-xl border border-medical-teal-light/50 hover:border-medical-teal transition-all hover:shadow-xl group slide-up" style="animation-delay: 0.5s;">
+                <div class="bg-white p-10 rounded-xl border border-slate-100 shadow-sm hover-lift group relative overflow-hidden">
                     <div class="flex items-center gap-4 mb-6">
-                        <div class="p-4 bg-amber-50 rounded-xl group-hover:bg-amber-100 transition-colors">
-                            <i data-lucide="split" class="w-6 h-6 text-amber-600"></i>
+                        <div class="p-4 bg-blue-50 rounded-lg text-medical-blue group-hover:bg-medical-blue group-hover:text-white transition-all">
+                            <i data-lucide="split" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-slate-900">الطلاق وآثاره</h3>
+                        <h3 class="text-2xl font-bold text-slate-900">الطلاق</h3>
                     </div>
-                    <p class="text-slate-600 leading-relaxed mb-6">فهم أسباب الطلاق وكيفية حماية الأطفال من تداعياته وبناء حياة جديدة مستقرة بعد الانفصال.</p>
-                    <a href="#" class="inline-flex items-center gap-2 text-medical-teal font-bold hover:gap-3 transition-all group/btn">
-                        معرفة المزيد
-                        <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                    <p class="text-slate-600 leading-relaxed text-lg mb-8">دليل توعوي حول الطلاق: أسبابه، تأثيراته النفسية، وكيفية حماية الأسرة وضمان استقرار الأطفال.</p>
+                    <span class="text-slate-400 text-sm font-medium italic">قريباً</span>
+                </div>
+
+                <!-- Bullying -->
+                <div class="bg-white p-10 rounded-xl border border-slate-100 shadow-sm hover-lift group relative overflow-hidden">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-4 bg-orange-50 rounded-lg text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all">
+                            <i data-lucide="shield-off" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">التنمر</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed text-lg mb-8">مواجهة التنمر بجميع أشكاله، وكيفية توفير بيئة تعليمية واجتماعية آمنة وداعمة للجميع.</p>
+                    <span class="text-slate-400 text-sm font-medium italic">قريباً</span>
+                </div>
+
+                <!-- Addiction -->
+                <div class="bg-white p-10 rounded-xl border border-slate-100 shadow-sm hover-lift group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-4 bg-red-50 rounded-lg text-red-600 group-hover:bg-red-600 group-hover:text-white transition-all">
+                            <i data-lucide="skull" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">الإدمان</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed text-lg mb-8">التوعية بمخاطر الإدمان بأنواعه، تأثيره المدمر على الفرد والأسرة، وخطوات التعافي والدعم.</p>
+                    <a href="addiction.html" class="flex items-center gap-2 text-red-600 font-bold hover:gap-4 transition-all">
+                        <span>اقرأ المزيد</span>
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i>
+                    </a>
+                </div>
+
+                <!-- Suicide Awareness -->
+                <div class="bg-white p-10 rounded-xl border border-slate-100 shadow-sm hover-lift group">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-4 bg-emerald-50 rounded-lg text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-all">
+                            <i data-lucide="life-buoy" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">الانتحار</h3>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed text-lg mb-8">كسر حاجز الصمت حول الصحة النفسية، كشف علامات الخطر، وكيفية تقديم المساعدة لإنقاذ الأرواح.</p>
+                    <a href="suicide.html" class="flex items-center gap-2 text-emerald-600 font-bold hover:gap-4 transition-all">
+                        <span>اقرأ المزيد</span>
+                        <i data-lucide="arrow-left" class="w-5 h-5"></i>
                     </a>
                 </div>
             </div>
-
-            <!-- View More Button Removed -->
         </div>
     </section>
 
-    <!-- Call to Action Banner -->
-    <section id="medical-content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32 scroll-mt-24">
-        <div class="bg-medical-teal rounded-3xl p-12 md:p-20 text-center text-white relative overflow-hidden shadow-2xl">
-            <!-- Decorative circle -->
-            <div class="absolute -top-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-            
-            <div class="relative z-10 slide-up">
-                <h2 class="text-3xl md:text-5xl font-bold mb-8">ابدأ رحلتك المعرفية اليوم</h2>
-                <p class="text-xl text-teal-50 mb-12 max-w-2xl mx-auto leading-relaxed">
-                    اختر الموضوع الذي يهمك وابدأ في تعلم كيفية إدارة صحتك بشكل أفضل مع خبرائنا.
-                </p>
-                <div class="flex flex-wrap justify-center gap-6">
-                    <a href="diabetes.html" class="px-10 py-5 bg-white text-medical-teal rounded-lg font-bold hover:bg-medical-teal-light hover:text-medical-teal-dark transition-all duration-300 shadow-xl">
-                        دليل مرض السكري
-                    </a>
-                    <a href="hypertension.html" class="px-10 py-5 bg-white text-medical-teal rounded-lg font-bold hover:bg-medical-teal-light hover:text-medical-teal-dark transition-all duration-300 shadow-xl">
-                        دليل ضغط الدم
+    <!-- Feedback Section -->
+    <section id="feedback" class="py-32 bg-white scroll-mt-48">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-medical-blue-deep rounded-xl p-8 md:p-16 flex flex-col md:flex-row items-center justify-between gap-12 text-white relative overflow-hidden shadow-2xl">
+                <!-- Decorative element -->
+                <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-medical-teal/10 rounded-full blur-3xl"></div>
+                
+                <div class="relative z-10 max-w-xl text-center md:text-right">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">شاركونا رأيكم</h2>
+                    <p class="text-xl text-teal-100 mb-10 leading-relaxed">
+                        نحن نقدر رأيكم بشدة ونسعى دائماً لتحسين منصتنا. يرجى ملء استبيان تقييم مدى رضا المستخدمين لنتمكن من خدمتكم بشكل أفضل.
+                    </p>
+                    <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Bm7bI8QFnUixNsupSo5vNiLTYaZnHsRLhOVrMOaaoadUQjc3REFFQUFOSEsxN0c3WlNaMDkxUzc1SC4u" 
+                       target="_blank"
+                       class="inline-flex items-center gap-3 px-10 py-5 bg-medical-teal text-white rounded-lg font-bold hover:bg-medical-teal-dark transition-all duration-300 shadow-xl text-lg group">
+                        افتح نموذج التقييم
+                        <i data-lucide="external-link" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
                     </a>
                 </div>
+
+                <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Bm7bI8QFnUixNsupSo5vNiLTYaZnHsRLhOVrMOaaoadUQjc3REFFQUFOSEsxN0c3WlNaMDkxUzc1SC4u" 
+                   target="_blank" 
+                   class="relative z-10 shrink-0 group block transition-transform duration-500 hover:scale-105">
+                    <div class="bg-white/10 backdrop-blur-md p-4 rounded-xl border border-white/20 shadow-2xl">
+                        <img src="https://api.typedream.com/v0/images/6df1a03a-3d5f-4029-9e80-77a80628e833_qr_code_feedback_png" 
+                             alt="QR Code For Feedback" 
+                             class="w-48 h-48 md:w-64 md:h-64 rounded-lg bg-white p-2">
+                    </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="footer" class="bg-medical-grey border-t border-medical-teal-light pt-20 pb-10 scroll-mt-24">
+    <footer id="footer" class="bg-medical-grey border-t border-slate-200 pt-20 pb-10 scroll-mt-48">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16 text-right">
                 <!-- Branding -->
                 <div class="space-y-6">
-                    <div class="flex items-center gap-2">
-                        <div class="bg-medical-teal-light p-2 rounded-md"><i data-lucide="heart" class="w-5 h-5 text-medical-teal"></i></div>
-                        <span class="text-xl font-bold text-medical-teal-dark">صحة مجتمع</span>
+                    <div class="flex items-center gap-2 justify-start">
+                        <div class="bg-medical-teal-light p-2 rounded-md"><i data-lucide="compass" class="w-5 h-5 text-medical-teal"></i></div>
+                        <span class="text-xl font-bold text-medical-teal-dark">بوصلة صحة المجتمع</span>
                     </div>
                     <p class="text-slate-600 leading-relaxed max-w-sm">
-                        منصة توعوية تهدف إلى نشر المعرفة الصحية الصحيحة وتمكين الأفراد من العناية بصحتهم والوقاية من الأمراض المزمنة.
+                        منصة توعوية شاملة تهدف إلى نشر الوعي الصحي والاجتماعي الصحيح وتمكين الأفراد من بناء حياة متوازنة ومستقرة.
                     </p>
                 </div>
 
-                <!-- Links -->
-                <div class="space-y-6">
+                <!-- Quick Links -->
+                <div class="space-y-6 text-right">
                     <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">روابط سريعة</h3>
                     <ul class="space-y-4 text-slate-600 font-medium">
                         <li><a href="index.html" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الرئيسية</a></li>
-                        <li><a href="diabetes.html" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> مرض السكري</a></li>
-                        <li><a href="hypertension.html" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> مرض ضغط الدم</a></li>
+                        <li><a href="#health-topics" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الصحية</a></li>
+                        <li><a href="#social-awareness" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الاجتماعية</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
-                <div class="space-y-6">
+                <div class="space-y-6 text-right font-medium">
                     <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">تواصل معنا</h3>
                     <div class="space-y-4">
                         <div class="flex items-center gap-4 text-slate-600">
-                            <div class="bg-white p-2 rounded-md shadow-sm"><i data-lucide="mail" class="w-4 h-4 text-medical-teal"></i></div>
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-5 h-5 text-medical-teal"></i></div>
                             <span>Example@gmail.com</span>
                         </div>
                         <div class="flex items-center gap-4 text-slate-600">
-                            <div class="bg-white p-2 rounded-md shadow-sm relative flex items-center justify-center">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 relative flex items-center justify-center shrink-0">
                                 <i data-lucide="message-circle" class="w-5 h-5 text-medical-teal"></i>
                                 <i data-lucide="phone" class="w-2.5 h-2.5 text-medical-teal absolute" style="transform: translateY(-1px);"></i>
                             </div>
-                            <a href="https://wa.me/201050919907" target="_blank" class="hover:text-medical-teal transition-colors font-medium" dir="ltr">+20 10 50919907</a>
+                            <a href="https://wa.me/201050919907" target="_blank" class="hover:text-medical-teal transition-colors" dir="ltr">+20 10 50919907</a>
                         </div>
                         <div class="flex items-center gap-4 text-slate-600">
-                            <div class="bg-white p-2 rounded-md shadow-sm"><i data-lucide="map-pin" class="w-4 h-4 text-medical-teal"></i></div>
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-medical-teal"></i></div>
                             <span>جمهورية مصر العربية ، الفيوم</span>
                         </div>
                     </div>
@@ -359,7 +371,7 @@
             </div>
 
             <div class="border-t border-slate-200 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-sm text-slate-500">© 2026 صحة مجتمع. جميع الحقوق محفوظة.</p>
+                <p class="text-sm text-slate-500">© 2026 بوصلة صحة المجتمع. جميع الحقوق محفوظة.</p>
                 <div class="flex gap-8 text-xs font-bold text-slate-400 uppercase tracking-widest">
                     <a href="#" class="hover:text-medical-teal">سياسة الخصوصية</a>
                     <a href="#" class="hover:text-medical-teal">شروط الاستخدام</a>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الانتحار | بوصلة صحة المجتمع</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    },
+                    colors: {
+                        medical: {
+                            teal: '#00BFFF',
+                            'teal-light': '#E0F7FF',
+                            'teal-dark': '#006080',
+                            blue: '#0082AD',
+                            'blue-light': '#00A1D6',
+                            'blue-deep': '#004157',
+                            grey: '#f5f5f5',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        .slide-up { animation: slideUp 0.6s ease-out forwards; opacity: 0; will-change: transform, opacity; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Mobile Menu Animation */
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobile-menu.menu-open {
+            max-height: 400px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased font-sans">
+
+    <!-- Nav (Shared) -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-medical-teal-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group">
+                        <div class="bg-medical-teal-light p-2 rounded-lg group-hover:bg-medical-teal transition-colors"><i data-lucide="compass" class="w-6 h-6 text-medical-teal group-hover:text-white"></i></div>
+                        <span class="text-xl font-bold text-medical-teal-dark tracking-tight">بوصلة صحة المجتمع</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="index.html" class="text-slate-600 hover:text-medical-teal transition-colors">الرئيسية</a>
+                    <a href="index.html#health-topics" class="text-slate-600 hover:text-medical-teal transition-colors">المحتوي الطبي</a>
+                    <a href="index.html#social-awareness" class="text-slate-600 hover:text-medical-teal transition-colors">قضايا اجتماعية</a>
+                    <a href="index.html#footer" class="text-slate-600 hover:text-medical-teal transition-colors">من نحن</a>
+                </div>
+                <div class="md:hidden flex items-center"><button id="menu-btn" class="p-2"><i data-lucide="menu" class="w-6 h-6"></i></button></div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-b border-medical-teal-light">
+            <div class="px-4 py-6 space-y-2">
+                <a href="index.html" class="block p-4 rounded-md">الرئيسية</a>
+                <a href="index.html#health-topics" class="block p-4 rounded-md">المحتوي الطبي</a>
+                <a href="index.html#social-awareness" class="block p-4 rounded-md">قضايا اجتماعية</a>
+                <a href="index.html#footer" class="block p-4 rounded-md">من نحن</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-emerald-50 py-24 border-b border-emerald-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center slide-up">
+            <h1 class="text-4xl md:text-6xl font-bold text-emerald-800 mb-6 font-primary">الوقاية من الانتحار: كل حياة غالية</h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">دليل توعوي لتعزيز الصحة النفسية، فهم علامات الخطر، وكيفية توفير الدعم للأشخاص في الأوقات الصعبة لإنقاذ الأرواح.</p>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
+            <!-- Content -->
+            <div class="lg:col-span-2 space-y-20 text-right">
+                <section class="slide-up">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-4">
+                        <i data-lucide="heart-pulse" class="w-8 h-8 text-emerald-600"></i> لماذا نتحدث عن الانتحار؟
+                    </h2>
+                    <div class="text-lg text-slate-600 leading-[1.8] space-y-6">
+                        <p>الصمت هو أكبر عدو للصحة النفسية. الحديث عن الانتحار بوعي ومسؤولية يقلل من الوصمة الاجتماعية ويفتح أبواب الأمل للباحثين عن مساعدة. تذكر أن الشعور باليأس هو حالة مؤقتة يمكن تجاوزها بالدعم المناسب.</p>
+                        <div class="bg-medical-grey p-10 rounded-xl border border-emerald-100">
+                            <h3 class="font-bold text-emerald-800 mb-6 text-xl underline decoration-2 underline-offset-8 decoration-emerald-200">علامات الخطر التي يجب الانتباه لها:</h3>
+                            <div class="space-y-6">
+                                <div class="flex gap-4">
+                                    <div class="bg-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">١</div>
+                                    <p><span class="font-bold text-slate-900 text-lg">التعبيرات اللفظية:</span> الحديث المتكرر عن الرغبة في الموت، الشعور بالفراغ، أو كونه عبئاً على الآخرين.</p>
+                                </div>
+                                <div class="flex gap-4">
+                                    <div class="bg-emerald-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">٢</div>
+                                    <p><span class="font-bold text-slate-900 text-lg">التغيرات السلوكية:</span> الانسحاب الاجتماعي التام، تقلبات مزاجية حادة، أو التخلص من المقتنيات الثمينة فجأة.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="slide-up" style="animation-delay: 0.2s;">
+                    <div class="rounded-2xl overflow-hidden shadow-2xl h-[500px] border-4 border-emerald-50">
+                        <img src="https://images.unsplash.com/photo-1518391846015-55a9cc00ddb5?auto=format&fit=crop&q=80&w=1280" class="w-full h-full object-cover" loading="lazy" referrerPolicy="no-referrer">
+                    </div>
+                    <p class="text-center mt-6 italic text-slate-500">أنت لست وحدك، والحديث مع شخص تثق به قد يكون بداية طريق النجاة.</p>
+                </section>
+
+                <section class="slide-up" style="animation-delay: 0.3s;">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-4">
+                        <i data-lucide="hand-metal" class="w-8 h-8 text-medical-blue"></i> كيف تساعد شخصاً في خطر؟
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="bg-blue-50 p-8 rounded-xl border border-blue-100">
+                            <h4 class="font-bold text-blue-900 mb-3 text-xl">١. اسأل مباشرة</h4>
+                            <p class="text-slate-600">لا تخف من سؤال الشخص عما إذا كان يفكر في الانتحار؛ هذا السؤال يظهر اهتمامك العميق.</p>
+                        </div>
+                        <div class="bg-blue-50 p-8 rounded-xl border border-blue-100">
+                            <h4 class="font-bold text-blue-900 mb-3 text-xl">٢. استمع بإنصات</h4>
+                            <p class="text-slate-600">استمع دون إلقاء أحكام أو نصائح فورية، فقط دع الشخص يعبر عما يمر به من ألم.</p>
+                        </div>
+                        <div class="bg-blue-50 p-8 rounded-xl border border-blue-100">
+                            <h4 class="font-bold text-blue-900 mb-3 text-xl">٣. لا تتركه بمفرده</h4>
+                            <p class="text-slate-600">إذا شعرت أن الخطر وشيك، ابقَ مع الشخص أو اطلب من شخص آخر التواجد معه.</p>
+                        </div>
+                        <div class="bg-blue-50 p-8 rounded-xl border border-blue-100">
+                            <h4 class="font-bold text-blue-900 mb-3 text-xl">٤. وجّهه للمساعدة</h4>
+                            <p class="text-slate-600">ساعده في الوصول إلى متخصص نفسي أو طبيب، أو تواصل مع أرقام الطوارئ المخصصة.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-10 shrink-0">
+                <div class="bg-white p-10 rounded-xl border border-emerald-100 shadow-xl sticky top-28 text-right">
+                    <h3 class="text-2xl font-bold text-emerald-800 mb-10 pb-4 border-b border-emerald-100">أرقام الأمل</h3>
+                    <div class="space-y-10">
+                        <div class="flex gap-5">
+                            <div class="bg-emerald-50 p-4 rounded-lg"><i data-lucide="phone" class="text-emerald-700"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">الخط الساخن للأمان النفسي</h4>
+                                <p class="text-2xl font-bold text-emerald-700">08008880700</p>
+                                <p class="text-sm text-slate-500">مصر - متاح مجاناً</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-5">
+                            <div class="bg-medical-teal-light p-4 rounded-lg"><i data-lucide="life-buoy" class="text-medical-teal"></i></div>
+                            <div>
+                                <h4 class="font-bold text-slate-900 mb-1">طوارئ الصحة النفسية</h4>
+                                <p class="text-xl font-bold text-medical-teal">0220816831</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-12 bg-emerald-700 text-white p-8 rounded-xl text-center shadow-lg">
+                        <p class="text-sm mb-4 font-medium opacity-90">هناك دائماً أمل، تذكر ذلك جيداً</p>
+                        <a href="mailto:Example@gmail.com" class="font-bold border-b-2 border-white/50 hover:border-white transition-all text-lg">نحن هنا للاستماع إليك</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Shared) -->
+    <footer class="bg-medical-grey border-t border-slate-200 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-slate-500 font-medium font-primary">© 2026 بوصلة صحة المجتمع. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        let isOpen = false;
+        menuBtn.onclick = () => {
+            isOpen = !isOpen;
+            mobileMenu.classList.toggle('menu-open');
+            const icon = menuBtn.querySelector('[data-lucide]');
+            if (icon) {
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        };
+    </script>
+</body>
+</html>

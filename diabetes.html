@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مرض السكري | صحة مجتمع</title>
+    <title>مرض السكري | بوصلة صحة المجتمع</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,15 @@
                         sans: ['Tajawal', 'sans-serif'],
                     },
                     colors: {
-                        medical: { teal: '#00897b', 'teal-light': '#e0f2f1', 'teal-dark': '#00695c', blue: '#0277bd', 'blue-light': '#e3f2fd', grey: '#f5f5f5' }
+                        medical: {
+                            teal: '#00BFFF',
+                            'teal-light': '#E0F7FF',
+                            'teal-dark': '#006080',
+                            blue: '#0082AD',
+                            'blue-light': '#00A1D6',
+                            'blue-deep': '#004157',
+                            grey: '#f5f5f5',
+                        }
                     }
                 }
             }
@@ -49,13 +57,13 @@
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
                     <a href="index.html" class="flex items-center gap-2 group">
-                        <div class="bg-medical-teal-light p-2 rounded-lg group-hover:bg-medical-teal transition-colors"><i data-lucide="heart" class="w-6 h-6 text-medical-teal group-hover:text-white"></i></div>
-                        <span class="text-xl font-bold text-medical-teal-dark tracking-tight">صحة مجتمع</span>
+                        <div class="bg-medical-teal-light p-2 rounded-lg group-hover:bg-medical-teal transition-colors"><i data-lucide="compass" class="w-6 h-6 text-medical-teal group-hover:text-white"></i></div>
+                        <span class="text-xl font-bold text-medical-teal-dark tracking-tight">بوصلة صحة المجتمع</span>
                     </a>
                 </div>
                 <div class="hidden md:flex items-center gap-8 font-medium">
                     <a href="index.html" class="text-slate-600 hover:text-medical-teal transition-colors">الرئيسية</a>
-                    <a href="index.html#medical-content" class="text-slate-600 hover:text-medical-teal transition-colors">المحتوي الطبي</a>
+                    <a href="index.html#health-topics" class="text-slate-600 hover:text-medical-teal transition-colors">المحتوي الطبي</a>
                     <a href="index.html#footer" class="text-slate-600 hover:text-medical-teal transition-colors">من نحن</a>
                 </div>
                 <div class="md:hidden flex items-center"><button id="menu-btn" class="p-2"><i data-lucide="menu" class="w-6 h-6"></i></button></div>
@@ -64,7 +72,7 @@
         <div id="mobile-menu" class="md:hidden bg-white border-b border-medical-teal-light">
             <div class="px-4 py-6 space-y-2">
                 <a href="index.html" class="block p-4 rounded-md">الرئيسية</a>
-                <a href="index.html#medical-content" class="block p-4 rounded-md">المحتوي الطبي</a>
+                <a href="index.html#health-topics" class="block p-4 rounded-md">المحتوي الطبي</a>
                 <a href="index.html#footer" class="block p-4 rounded-md">من نحن</a>
             </div>
         </div>
@@ -153,9 +161,9 @@
     </div>
 
     <!-- Footer (Shared) -->
-    <footer class="bg-medical-grey border-t border-medical-teal-light py-20">
+    <footer class="bg-medical-grey border-t border-slate-200 py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <p class="text-slate-500 font-medium">© 2026 صحة مجتمع. جميع الحقوق محفوظة.</p>
+            <p class="text-slate-500 font-medium">© 2026 بوصلة صحة المجتمع. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
 
