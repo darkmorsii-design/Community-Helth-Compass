@@ -99,84 +99,766 @@
     <!-- Page Header -->
     <header class="bg-medical-teal-light/40 py-24 border-b border-medical-teal-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center slide-up">
-            <h1 class="text-4xl md:text-6xl font-bold text-medical-teal-dark mb-6">فهم وإدارة مرض السكري</h1>
-            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">دليل شامل حول أنواع مرض السكري، أعراضه، وكيفية التعايش معه بسلام لتحسين جودة حياتك اليومية.</p>
+            <h1 class="text-4xl md:text-6xl font-bold text-medical-teal-dark mb-6 tracking-tight">مرض السكري: الوقاية والإدارة</h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">دليل شامل للأفراد وكبار السن حول فهم مرض السكري، أعراضه، تشخيصه، وطرق التعايش الآمن معه.</p>
         </div>
     </header>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            <!-- Content -->
-            <div class="lg:col-span-2 space-y-20">
-                <section class="slide-up">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-4">
-                        <i data-lucide="beaker" class="w-8 h-8 text-medical-teal"></i> ما هو مرض السكري؟
-                    </h2>
-                    <div class="text-lg text-slate-600 leading-[1.8] space-y-6">
-                        <p>مرض السكري هو حالة طبية مزمنة تؤثر على كيفية معالجة الجسم لغلوكوز الدم. يحدث السكري عندما لا ينتج البنكرياس كمية كافية من الأنسولين.</p>
-                        <div class="bg-medical-grey p-10 rounded-xl border border-medical-teal-light">
-                            <h3 class="font-bold text-medical-teal-dark mb-6 text-xl underline decoration-2 underline-offset-8 decoration-medical-teal/30">الأنواع الرئيسية:</h3>
-                            <div class="space-y-6">
-                                <div class="flex gap-4">
-                                    <div class="bg-medical-teal text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">١</div>
-                                    <p><span class="font-bold text-slate-900">النوع الأول:</span> غالباً ما يُشخص في الأطفال، حيث يهاجم الجهاز المناعي خلايا البنكرياس.</p>
-                                </div>
-                                <div class="flex gap-4">
-                                    <div class="bg-medical-teal text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">٢</div>
-                                    <p><span class="font-bold text-slate-900">النوع الثاني:</span> هو الأكثر شيوعاً، ويرتبط بنمط الحياة والوزن الزائد والوراثة.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="slide-up" style="animation-delay: 0.2s;">
-                    <div class="rounded-2xl overflow-hidden shadow-2xl h-[500px] border-4 border-medical-teal-light/20">
-                        <img src="https://picsum.photos/seed/medical-monitor/1000/600" class="w-full h-full object-cover" loading="lazy" referrerPolicy="no-referrer">
-                    </div>
-                    <p class="text-center mt-6 italic text-slate-500">فحص سكر الدم المنتظم هو الخطوة الأولى للإدارة السليمة للمرض.</p>
-                </section>
-
-                <!-- Video placeholder -->
-                <section class="bg-medical-blue-light/30 p-12 rounded-2xl border border-medical-blue-light text-center slide-up">
-                    <i data-lucide="play-circle" class="w-20 h-20 text-medical-blue mx-auto mb-8"></i>
-                    <h3 class="text-2xl font-bold text-slate-900 mb-4">فيديو تعليمي: كيف يعمل الأنسولين؟</h3>
-                    <p class="text-slate-600 mb-10 max-w-xl mx-auto">شاهد هذا الفيديو المبسط لفهم دور الأنسولين في الجسم وكيف يؤثر السكري على هذه العملية.</p>
-                    <div class="aspect-video bg-white/50 border-4 border-dashed border-medical-blue/20 rounded-xl flex items-center justify-center relative group cursor-pointer overflow-hidden">
-                        <span class="text-slate-400 font-bold group-hover:text-medical-blue transition-colors">فيديو يوتيوب سيظهر هنا</span>
-                        <div class="absolute inset-0 bg-medical-blue/5 group-hover:bg-medical-blue/10 transition-colors"></div>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Sidebar -->
-            <div class="space-y-10 shrink-0">
-                <div class="bg-white p-10 rounded-xl border border-medical-teal-light shadow-xl sticky top-28">
-                    <h3 class="text-2xl font-bold text-medical-teal-dark mb-10 pb-4 border-b border-medical-teal-light">نصائح للتعايش</h3>
-                    <div class="space-y-10">
-                        <div class="flex gap-5">
-                            <div class="bg-medical-teal-light p-4 rounded-lg"><i data-lucide="apple" class="text-medical-teal"></i></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 mb-1">الغذاء الصحي</h4>
-                                <p class="text-sm text-slate-600 leading-relaxed">التركيز على الألياف، الخضروات، وتقليل السكريات المكررة.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-5">
-                            <div class="bg-medical-blue-light p-4 rounded-lg"><i data-lucide="activity" class="text-medical-blue"></i></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 mb-1">النشاط البدني</h4>
-                                <p class="text-sm text-slate-600 leading-relaxed">المشي لمدة 30 دقيقة يومياً يساعد في تنظيم مستويات السكر.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-12 bg-medical-teal text-white p-8 rounded-xl text-center shadow-lg">
-                        <p class="text-sm mb-4 font-medium opacity-90">هل لديك أسئلة؟</p>
-                        <a href="mailto:Example@gmail.com" class="font-bold border-b-2 border-white/50 hover:border-white transition-all">استشر متخصصاً الآن</a>
-                    </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            
+            <!-- Quick Navigation Sidebar (Sticky) -->
+            <aside class="hidden lg:block lg:col-span-1">
+                <div class="sticky top-28 space-y-4">
+                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">فهرس المحتوى</h3>
+                    <nav class="flex flex-col gap-2 border-r-2 border-slate-100 pr-4">
+                        <a href="#intro" class="text-slate-600 hover:text-medical-teal transition-colors py-1">المقدمة والتعريف</a>
+                        <a href="#causes" class="text-slate-600 hover:text-medical-teal transition-colors py-1">الأسباب وعوامل الخطورة</a>
+                        <a href="#types" class="text-slate-600 hover:text-medical-teal transition-colors py-1">الأنواع والأعراض</a>
+                        <a href="#diagnosis" class="text-slate-600 hover:text-medical-teal transition-colors py-1">التشخيص</a>
+                        <a href="#treatment" class="text-slate-600 hover:text-medical-teal transition-colors py-1">الرعاية والعلاج</a>
+                        <a href="#prevention" class="text-slate-600 hover:text-medical-teal transition-colors py-1">الوقاية</a>
+                        <a href="#complications" class="text-slate-600 hover:text-medical-teal transition-colors py-1">المضاعفات</a>
+                        <a href="#diabetic-foot" class="text-medical-blue font-bold py-1">القدم السكري</a>
+                    </nav>
                 </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <div class="lg:col-span-3 space-y-24">
+                
+                <!-- Intro & Definition -->
+                <section id="intro" class="slide-up">
+                    <div class="prose prose-lg max-w-none text-slate-600 space-y-6">
+                        <div class="bg-blue-50 border-r-4 border-medical-teal p-8 rounded-l-xl">
+                            <h2 class="text-2xl font-bold text-medical-teal-dark mb-4">مقدمة</h2>
+                            <p class="leading-relaxed">مرض السكري هو حالة مزمنة تتميز بارتفاع مستويات السكر في الدم. يمكن أن تكون الإصابة بمرض السكري لدى كبار السن أكثر تعقيداً نظراً لاحتمال وجود مشاكل صحية مزدوجة، مثل ارتفاع ضغط الدم وأمراض القلب. تعتبر الوقاية والإدارة السليمة لمرض السكري من الأمور الحيوية للحفاظ على الصحة.</p>
+                        </div>
+                        
+                        <div class="mt-12">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                                <i data-lucide="info" class="w-7 h-7 text-medical-teal"></i> تعريف المرض
+                            </h3>
+                            <p class="leading-relaxed">مرض السكري هو حالة يتميز فيها جسم الإنسان بارتفاع مستويات السكر في الدم بشكل مستمر، وذلك بسبب اضطراب في عمل هرمون الإنسولين أو انخفاض كمية إنتاجه، مما يؤدي إلى مشاكل صحية عديدة.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Causes & Risk Factors -->
+                <section id="causes" class="slide-up">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-10 flex items-center gap-4">
+                        <i data-lucide="microscope" class="w-8 h-8 text-medical-teal"></i> الأسباب وعوامل الخطورة
+                    </h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- Causes -->
+                        <div class="bg-medical-grey p-8 rounded-2xl border border-slate-100">
+                            <h3 class="text-xl font-bold text-medical-teal-dark mb-6">الأسباب الرئيسية</h3>
+                            <ul class="space-y-4">
+                                <li class="flex gap-3 text-slate-600"><i data-lucide="dna" class="w-5 h-5 text-medical-teal shrink-0"></i> <span><strong class="text-slate-800">عوامل وراثية:</strong> تزداد المخاطر إذا كان أحد أفراد العائلة مصاباً.</span></li>
+                                <li class="flex gap-3 text-slate-600"><i data-lucide="leaf" class="w-5 h-5 text-medical-teal shrink-0"></i> <span><strong class="text-slate-800">عوامل بيئية:</strong> النمط الغذائي غير الصحي وقلة النشاط البدني والبدانة.</span></li>
+                                <li class="flex gap-3 text-slate-600"><i data-lucide="activity" class="w-5 h-5 text-medical-teal shrink-0"></i> <span><strong class="text-slate-800">مشاكل البنكرياس:</strong> نقص إفرار الإنسولين أو مقاومة الخلايا له.</span></li>
+                                <li class="flex gap-3 text-slate-600"><i data-lucide="test-tube" class="w-5 h-5 text-medical-teal shrink-0"></i> <span><strong class="text-slate-800">العوامل الهرمونية:</strong> تغيرات هرمونية مثل الكورتيزول.</span></li>
+                                <li class="flex gap-3 text-slate-600"><i data-lucide="brain" class="w-5 h-5 text-medical-teal shrink-0"></i> <span><strong class="text-slate-800">العوامل العصبية:</strong> التوتر والضغط النفسي يؤثران على المستويات.</span></li>
+                            </ul>
+                        </div>
+
+                        <!-- Risk Factors -->
+                        <div class="bg-white p-8 rounded-2xl border border-medical-teal-light shadow-sm">
+                            <h3 class="text-xl font-bold text-medical-teal-dark mb-6">عوامل الخطورة</h3>
+                            <ul class="space-y-4">
+                                <li class="flex gap-3 text-slate-600">
+                                    <i data-lucide="hourglass" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                    <span><strong class="text-slate-800">العمر:</strong> كلما زاد العمر، زادت احتمالية الإصابة بمرض السكري من النوع الثاني.</span>
+                                </li>
+                                <li class="flex gap-3 text-slate-600">
+                                    <i data-lucide="user" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                    <span><strong class="text-slate-800">الوزن:</strong> البدانة أو زيادة الوزن تعتبر عامل خطورة رئيسي لمرض السكري.</span>
+                                </li>
+                                <li class="flex gap-3 text-slate-600">
+                                    <i data-lucide="users" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                    <span><strong class="text-slate-800">الوراثة:</strong> وجود أفراد في العائلة مصابين بمرض السكري يزيد من احتمالية الاصابة به.</span>
+                                </li>
+                                <li class="flex gap-3 text-slate-600">
+                                    <i data-lucide="activity" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                    <span><strong class="text-slate-800">نمط الحياة:</strong> النشاط البدني الضعيف والنظام الغذائي السيء يزيدان من خطر الإصابة بمرض السكري.</span>
+                                </li>
+                                <li class="flex gap-3 text-slate-600">
+                                    <i data-lucide="heart-pulse" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                    <span><strong class="text-slate-800">ضغط الدم ومستويات الكولسترول:</strong> ارتفاع ضغط الدم ومستويات الكولسترول العالية يمكن أن تزيدان من خطر الاصابة بمرض السكري.</span>
+                                </li>
+                                <li class="flex gap-3 text-slate-600">
+                                    <i data-lucide="brain" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                    <span><strong class="text-slate-800">التوتر والقلق:</strong> الضغوط النفسية المستمرة يمكن أن تزيد من احتمالية الاصابة بمرض السكري.</span>
+                                </li>
+                                <li class="flex gap-3 text-slate-600">
+                                    <i data-lucide="history" class="w-5 h-5 text-medical-teal shrink-0"></i>
+                                    <span><strong class="text-slate-800">التاريخ الطبي:</strong> ارتفاع مستويات السكر في الدم خلال الحمل (سكري الحمل) أو ارتفاع مستويات السكر في الدم دون وجود أعراض واضحة (ما قبل السكري) يمكن أن يزيدان من خطر الاصابة بمرض السكري لاحقاً في الحياة.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Types & Symptoms -->
+                <section id="types" class="slide-up">
+                    <div class="space-y-16">
+                        <!-- Types -->
+                        <div>
+                            <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-4">
+                                <i data-lucide="layers" class="w-8 h-8 text-medical-teal"></i> أنواع مرض السكري
+                            </h2>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                <div class="p-8 rounded-2xl border-2 border-medical-teal-light bg-white">
+                                    <h3 class="text-xl font-bold text-slate-900 mb-4">النوع الأول (Type 1)</h3>
+                                    <p class="text-slate-600 leading-relaxed italic mb-4">توقف البنكرياس عن إنتاج الإنسولين.</p>
+                                    <p class="text-slate-600">يتطلب علاجاً بحقن الإنسولين بانتظام لتعويض نقص الهرمون.</p>
+                                </div>
+                                <div class="p-8 rounded-2xl border-2 border-medical-blue-light bg-white">
+                                    <h3 class="text-xl font-bold text-slate-900 mb-4">النوع الثاني (Type 2)</h3>
+                                    <p class="text-slate-600 leading-relaxed italic mb-4">مقاومة الجسم للإنسولين أو نقصه.</p>
+                                    <p class="text-slate-600">يمكن التحكم فيه غالباً بتغيير نمط الحياة، وقد يتطلب أدوية أو إنسولين أحياناً.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Symptoms -->
+                        <div class="bg-slate-900 text-white p-12 rounded-3xl overflow-hidden relative">
+                            <div class="absolute top-0 left-0 w-32 h-32 bg-medical-teal/20 blur-3xl rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                            <h2 class="text-3xl font-bold mb-10 border-r-4 border-medical-teal pr-6">الأعراض</h2>
+                            <p class="text-slate-400 mb-8 italic">أعراض مرض السكري قد تتضمن:</p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="droplets"></i></div>
+                                    <div><h4 class="font-bold">العطش الزائد والجفاف</h4><p class="text-slate-400 text-sm">شعور بالعطش الشديد وجفاف الفم.</p></div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="clock"></i></div>
+                                    <div><h4 class="font-bold">التبول المتكرر</h4><p class="text-slate-400 text-sm">زيادة في التبول، خاصةً ليلاً.</p></div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="utensils"></i></div>
+                                    <div><h4 class="font-bold">الجوع المفرط</h4><p class="text-slate-400 text-sm">شعور بالجوع المفرط حتى بعد تناول الطعام.</p></div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="trending-down"></i></div>
+                                    <div><h4 class="font-bold">فقدان الوزن الغير المبرر</h4><p class="text-slate-400 text-sm">فقدان الوزن دون أي سبب ظاهر، على الرغم من زيادة الشهية.</p></div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="battery-low"></i></div>
+                                    <div><h4 class="font-bold">التعب والإرهاق</h4><p class="text-slate-400 text-sm">شعور بالتعب والإرهاق دون سبب واضح.</p></div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="frown"></i></div>
+                                    <div><h4 class="font-bold">العصبية والتوتر</h4><p class="text-slate-400 text-sm">تغيرات في المزاج، العصبية، والتوتر.</p></div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="thermometer"></i></div>
+                                    <div><h4 class="font-bold">الجروح البطيئة في الشفاء</h4><p class="text-slate-400 text-sm">جروح وقروح تستغرق وقتاً طويلاً في الشفاء.</p></div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="eye"></i></div>
+                                    <div><h4 class="font-bold">الرؤية المشوشة</h4><p class="text-slate-400 text-sm">عدم وضوح الرؤية أو الرؤية المزعجة.</p></div>
+                                </div>
+                                <div class="flex items-start gap-4">
+                                    <div class="bg-medical-teal/20 p-2 rounded-lg text-medical-teal"><i data-lucide="hand"></i></div>
+                                    <div><h4 class="font-bold">التنميل في الأطراف</h4><p class="text-slate-400 text-sm">شعور بالتنميل أو الخدر في اليدين والقدمين.</p></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Diagnosis -->
+                <section id="diagnosis" class="slide-up">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-10 flex items-center gap-4">
+                        <i data-lucide="clipboard-check" class="w-8 h-8 text-medical-teal"></i> التشخيص والنسب الطبيعية
+                    </h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-right border-collapse bg-white rounded-xl overflow-hidden shadow-sm">
+                            <thead>
+                                <tr class="bg-medical-teal text-white">
+                                    <th class="p-6">نوع الفحص</th>
+                                    <th class="p-6">الوصف</th>
+                                    <th class="p-6">النسبة الطبيعية</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-slate-600">
+                                <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                    <td class="p-6 font-bold text-slate-900">السكر الصائم</td>
+                                    <td class="p-6">على ريق (معدة فارغة)</td>
+                                    <td class="p-6">أقل من 100 مجم/ديسيلتر</td>
+                                </tr>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                    <td class="p-6 font-bold text-slate-900">بعد الأكل بساعتين</td>
+                                    <td class="p-6">قياس السكر بعد الوجبة</td>
+                                    <td class="p-6">أقل من 140 ملغ/ديسيلتر</td>
+                                </tr>
+                                <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                    <td class="p-6 font-bold text-slate-900">السكر التراكمي (HbA1c)</td>
+                                    <td class="p-6">متوسط السكر لـ 3 أشهر</td>
+                                    <td class="p-6">أقل من 5.7 %</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="mt-4 text-sm text-slate-500 italic">* تشمل الفحوصات أيضاً اختبار السكر في البول واختبار تحمل الجلوكوز.</p>
+                </section>
+
+                <!-- Treatment -->
+                <section id="treatment" class="slide-up">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-4">
+                        <i data-lucide="heart-pulse" class="w-8 h-8 text-medical-teal"></i> الرعاية والعلاج
+                    </h2>
+
+                    <div class="space-y-12">
+                        <!-- Care & Management -->
+                        <div class="bg-white border border-medical-teal-light rounded-3xl p-10">
+                            <h3 class="text-2xl font-bold text-medical-teal-dark mb-6 underline decoration-4 decoration-medical-teal-light underline-offset-8">العلاج والرعاية الصحية</h3>
+                            
+                            <p class="text-slate-600 mb-10 leading-relaxed">
+                                يحتاج المريض إلى حقن الانسولين للسيطرة على مستوى السكر في الدم. إليك بعض الخطوات الأساسية في علاج السكري من الدرجة الأولى:
+                            </p>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                <div class="space-y-8">
+                                    <div class="flex gap-5">
+                                        <div class="w-12 h-12 bg-medical-teal/10 rounded-xl flex items-center justify-center shrink-0">
+                                            <i data-lucide="syringe" class="w-6 h-6 text-medical-teal"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 mb-2">١. حقن الانسولين</h4>
+                                            <p class="text-slate-600 text-sm leading-relaxed">يعتبر حقن الانسولين هو العلاج الأساسي للسكري من الدرجة الأولى للسيطرة على المستويات.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-5">
+                                        <div class="w-12 h-12 bg-medical-teal/10 rounded-xl flex items-center justify-center shrink-0">
+                                            <i data-lucide="activity" class="w-6 h-6 text-medical-teal"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 mb-2">٢. مراقبة مستوى السكر في الدم</h4>
+                                            <p class="text-slate-600 text-sm leading-relaxed">يجب على المريض قياس مستوى السكر في الدم بانتظام باستخدام جهاز القياس المنزلي.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="space-y-8">
+                                    <div class="flex gap-5">
+                                        <div class="w-12 h-12 bg-medical-teal/10 rounded-xl flex items-center justify-center shrink-0">
+                                            <i data-lucide="apple" class="w-6 h-6 text-medical-teal"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 mb-2">٣. التغذية السليمة</h4>
+                                            <p class="text-slate-600 text-sm leading-relaxed">تقليل تناول الكربوهيدرات البسيطة والسكريات المكررة والاعتماد على الألياف.</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-5">
+                                        <div class="w-12 h-12 bg-medical-teal/10 rounded-xl flex items-center justify-center shrink-0">
+                                            <i data-lucide="bike" class="w-6 h-6 text-medical-teal"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="font-bold text-slate-900 mb-2">٤. ممارسة النشاط البدني</h4>
+                                            <p class="text-slate-600 text-sm leading-relaxed">ينصح بممارسة النشاط البدني بانتظام لتحسين حساسية الجسم، وذلك بعد استشارة الطبيب.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-12 bg-medical-teal/5 p-8 rounded-2xl border-r-4 border-medical-teal">
+                                <h4 class="font-bold text-medical-teal-dark mb-4 flex items-center gap-2">
+                                    <i data-lucide="footprints" class="w-6 h-6"></i> الرعاية الذاتية (القدمين)
+                                </h4>
+                                <p class="text-slate-700 leading-relaxed">
+                                    يجب على المريض الاهتمام بصحة قدميه وتنظيفها وفحصها بانتظام للكشف عن أي علامات تدل على التلف أو الجروح البطيئة في الشفاء لتجنب المضاعفات الخطيرة.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Insulin Injection Guide -->
+                        <div class="bg-medical-blue-light/10 border-2 border-dashed border-medical-blue-light p-10 rounded-3xl">
+                            <h3 class="text-2xl font-bold text-medical-blue mb-8">دليل حقن الإنسولين</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                                <section>
+                                    <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2"><i data-lucide="map-pin" class="w-5 h-5"></i> أماكن الحقن</h4>
+                                    <ul class="space-y-4">
+                                        <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">البطن:</strong> الأكثر شيوعاً، على بعد 5 سم من السرة.</li>
+                                        <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">أعلى الذراع:</strong> منطقة خارجية علوية.</li>
+                                        <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">الفخذ:</strong> في منتصف المسافة بين الركبة والورك.</li>
+                                        <li class="bg-white p-4 rounded-xl text-sm border border-slate-100 shadow-sm"><strong class="text-medical-blue">خلف الورك:</strong> قد يحتاج مساعدة شخص آخر.</li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2"><i data-lucide="info" class="w-5 h-5"></i> كيف يتم الحقن؟</h4>
+                                    <div class="space-y-4 text-sm text-slate-600">
+                                        <p class="flex items-center gap-3 bg-white p-3 rounded-lg"><span class="w-6 h-6 bg-medical-blue text-white rounded-full flex items-center justify-center shrink-0">١</span> اغسل يديك وعقم مكان الحقن بالكحول.</p>
+                                        <p class="flex items-center gap-3 bg-white p-3 rounded-lg"><span class="w-6 h-6 bg-medical-blue text-white rounded-full flex items-center justify-center shrink-0">٢</span> امسك طية من الجلد لضمان عدم حقن العضل.</p>
+                                        <p class="flex items-center gap-3 bg-white p-3 rounded-lg"><span class="w-6 h-6 bg-medical-blue text-white rounded-full flex items-center justify-center shrink-0">٣</span> اغرز الإبرة بزاوية 90 درجة برمتها وادفع المكبس.</p>
+                                        <p class="flex items-center gap-3 bg-white p-3 rounded-lg"><span class="w-6 h-6 bg-medical-blue text-white rounded-full flex items-center justify-center shrink-0">٤</span> انتظر 5 ثواني قبل سحب الإبرة ثم اضغط مكانها.</p>
+                                    </div>
+                                </section>
+                            </div>
+                            <!-- Storage -->
+                            <div class="mt-12 bg-white/60 p-8 rounded-2xl border border-medical-blue/20">
+                                <h4 class="font-bold text-slate-900 mb-6 flex items-center gap-2"><i data-lucide="snowflake" class="w-5 h-5"></i> تخزين الإنسولين</h4>
+                                <div class="space-y-6 text-slate-700 leading-relaxed">
+                                    <div class="flex gap-4">
+                                        <i data-lucide="thermometer-snowflake" class="w-5 h-5 text-medical-blue shrink-0"></i>
+                                        <p class="text-sm">يفضل حفظ عبوات الأنسولين في الثلاجة على درجة حرارة معتدلة تتراوح ما بين ٢-٨ س˚، حيث أن تعرضها للشمس أو لدرجات الحرارة العالية أو المنخفضة سيؤدي إلى تلف الأنسولين بسرعة وبالتالي التقليل من مدة صلاحيته.</p>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <i data-lucide="calendar" class="w-5 h-5 text-medical-blue shrink-0"></i>
+                                        <p class="text-sm">إذا تم حفظ عبوة الأنسولين المغلقة في الثلاجة فإنها تبقى صالحة للاستعمال طوال مدة الصلاحية المطبوعة على العبوة ولكنها تبقى صالحة لمدة <strong class="text-slate-900">شهر واحد فقط</strong> بعد الفتح.</p>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <i data-lucide="alert-triangle" class="w-5 h-5 text-red-500 shrink-0"></i>
+                                        <p class="text-sm">ويجب على المريض دائماً تفحص عبوة الأنسولين قبل أخذ الحقنة حيث أن وجود أي ترسبات أو تغيرات في اللون أو تعكر في الأنسولين بعد أن كان نقي المظهر يعني بأن هذا الأنسولين غير صالح للاستعمال ويجب التخلص منه.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Type 2 Management -->
+                        <div class="bg-medical-grey rounded-3xl p-10 border border-slate-200">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-6">علاج السكري من الدرجة الثانية</h3>
+                            <p class="text-slate-600 mb-10 leading-relaxed">
+                                يشمل مجموعة من الإجراءات التي تهدف إلى التحكم في مستوى السكر في الدم وتعزيز الصحة العامة. وفيما يلي بعض الأساليب الشائعة لعلاج السكري من الدرجة الثانية:
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:border-medical-teal/30 transition-colors">
+                                    <h5 class="font-bold mb-2 text-medical-teal-dark">١. التغذية السليمة</h5>
+                                    <p class="text-sm text-slate-600 leading-relaxed">ينصح بتناول وجبات صغيرة ومتكررة على مدار اليوم بدلاً من تناول وجبات ثقيلة ومتأخرة. يجب تقليل تناول الكربوهيدرات البسيطة والسكريات المكررة، وزيادة تناول الألياف الغذائية والخضروات والفواكه.</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:border-medical-teal/30 transition-colors">
+                                    <h5 class="font-bold mb-2 text-medical-teal-dark">٢. ممارسة النشاط البدني</h5>
+                                    <p class="text-sm text-slate-600 leading-relaxed">التمارين المناسبة: المشي السريع، ركوب الدراجة، السباحة، وتمارين القوة لتحسين كفاءة الأنسولين.</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:border-medical-teal/30 transition-colors">
+                                    <h5 class="font-bold mb-2 text-medical-teal-dark">٣. فقدان الوزن</h5>
+                                    <p class="text-sm text-slate-600 leading-relaxed">في حالة السمنة أو زيادة الوزن، يساعد فقدان الوزن بشكل ملحوظ في السيطرة على الأعراض والمضاعفات.</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:border-medical-teal/30 transition-colors">
+                                    <h5 class="font-bold mb-2 text-medical-teal-dark">٤. الأدوية السكرية</h5>
+                                    <p class="text-sm text-slate-600 leading-relaxed">قد يصف الطبيب أدوية سكرية لزيادة إنتاج الأنسولين أو تحسين حساسية الخلايا له وتنظيم السكر في الدم.</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:border-medical-teal/30 transition-colors">
+                                    <h5 class="font-bold mb-2 text-medical-teal-dark">٥. مراقبة مستوى السكر</h5>
+                                    <p class="text-sm text-slate-600 leading-relaxed">يجب على المريض قياس مستوى السكر في الدم بانتظام لمتابعة استجابة الجسم للعلاج والنظام الغذائي.</p>
+                                </div>
+                                <div class="bg-white p-6 rounded-xl border border-slate-100 shadow-sm hover:border-medical-teal/30 transition-colors">
+                                    <h5 class="font-bold mb-2 text-medical-teal-dark">٦. الرعاية الذاتية</h5>
+                                    <p class="text-sm text-slate-600 leading-relaxed">يجب على المريض تعلم مهارات إدارة السكري والاهتمام بالصحة العامة ومراقبة أية تغيرات جسدية.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Prevention -->
+                <section id="prevention" class="slide-up text-right">
+                    <div class="bg-medical-teal text-white p-10 md:p-16 rounded-3xl shadow-2xl relative overflow-hidden">
+                        <div class="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+                        <div class="relative z-10">
+                            <h2 class="text-3xl md:text-4xl font-bold mb-10 flex items-center justify-center gap-4 text-white">
+                                <i data-lucide="shield-check" class="w-10 h-10"></i> الوقاية من مرض السكري
+                            </h2>
+                            <p class="text-xl text-center mb-12 opacity-90 font-medium">تتضمن استراتيجيات الوقاية من مرض السكري عدة خطوات من بينها:</p>
+                            
+                            <div class="space-y-12">
+                                <!-- 1. Healthy Diet -->
+                                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3 border-r-4 border-white pr-4">١. النظام الغذائي الصحي</h3>
+                                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+                                        <div class="space-y-6">
+                                            <p class="text-lg font-bold text-white underline decoration-2 underline-offset-8">المبادئ الأساسية:</p>
+                                            <ul class="space-y-2 text-sm">
+                                                <li class="flex items-center gap-2">• تناول وجبات متوازنة تشمل الفواكه والخضروات والحبوب الكاملة.</li>
+                                                <li class="flex items-center gap-2">• تقليل استهلاك السكريات المصنعة والدهون المشبعة.</li>
+                                            </ul>
+
+                                            <div class="space-y-6 mt-8">
+                                                <div class="bg-white/5 p-4 rounded-xl">
+                                                    <h4 class="font-bold mb-2 flex items-center gap-2 text-medical-teal-light"><i data-lucide="cooking-pot" class="w-4 h-4"></i> الكربوهيدرات:</h4>
+                                                    <p class="text-sm opacity-90 leading-relaxed">اختيار كربوهيدرات معقدة مثل الشوفان، الأرز البني، الخبز الكامل، العدس، الحمص. تقليل السكريات البسيطة مثل الحلويات والمشروبات الغازية.</p>
+                                                </div>
+                                                <div class="bg-white/5 p-4 rounded-xl">
+                                                    <h4 class="font-bold mb-2 flex items-center gap-2 text-medical-teal-light"><i data-lucide="beef" class="w-4 h-4"></i> البروتين:</h4>
+                                                    <p class="text-sm opacity-90 leading-relaxed">تناول بروتين صحي مثل الدجاج، الأسماك، البقوليات، ومنتجات الألبان قليلة الدسم، يمكن تناول البيض والمكسرات باعتدال.</p>
+                                                </div>
+                                                <div class="bg-white/5 p-4 rounded-xl">
+                                                    <h4 class="font-bold mb-2 flex items-center gap-2 text-medical-teal-light"><i data-lucide="droplet" class="w-4 h-4"></i> الدهون:</h4>
+                                                    <p class="text-sm opacity-90 leading-relaxed">اختيار الدهون الصحية مثل زيت الزيتون، الأسماك الدهنية، والمكسرات مع تقليل الدهون المشبعة.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="space-y-6">
+                                            <div class="bg-white/5 p-4 rounded-xl">
+                                                <h4 class="font-bold mb-2 flex items-center gap-2 text-medical-teal-light"><i data-lucide="leaf" class="w-4 h-4"></i> الخضروات والفواكه:</h4>
+                                                <p class="text-sm opacity-90 leading-relaxed">الإكثار من الخضروات والفواكه الغنية بالألياف وتفضيل الخضروات داكنة اللون.</p>
+                                            </div>
+                                            <div class="bg-white/5 p-4 rounded-xl">
+                                                <h4 class="font-bold mb-2 flex items-center gap-2 text-medical-teal-light"><i data-lucide="layout-grid" class="w-4 h-4"></i> تنظيم الوجبات:</h4>
+                                                <p class="text-sm opacity-90 leading-relaxed">تناول وجبات صغيرة ومتكررة بدلاً من وجبات كبيرة، وتوزيع العناصر الغذائية بشكل متوازن.</p>
+                                            </div>
+                                            <div class="bg-white/5 p-4 rounded-xl">
+                                                <h4 class="font-bold mb-2 flex items-center gap-2 text-medical-teal-light"><i data-lucide="flask-conical-off" class="w-4 h-4"></i> تقليل الصوديوم:</h4>
+                                                <p class="text-sm opacity-90 leading-relaxed">تقليل الأطعمة المصنعة والمعلبة للحماية من ضغط الدم المرتبط بالسكري.</p>
+                                            </div>
+                                            <div class="bg-white/5 p-4 rounded-xl">
+                                                <h4 class="font-bold mb-2 flex items-center gap-2 text-medical-teal-light"><i data-lucide="glass-water" class="w-4 h-4"></i> شرب الماء:</h4>
+                                                <p class="text-sm opacity-90 leading-relaxed">شرب كميات كافية من الماء وتجنب المشروبات السكرية تماماً.</p>
+                                            </div>
+                                            <div class="bg-white/5 p-4 rounded-xl">
+                                                <h4 class="font-bold mb-2 flex items-center gap-2 text-medical-teal-light"><i data-lucide="scale" class="w-4 h-4"></i> التحكم في الوزن:</h4>
+                                                <p class="text-sm opacity-90 leading-relaxed">تقليل السعرات الحرارية عند زيادة الوزن واستشارة أخصائي تغذية عند الحاجة.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 2. Regular Exercise -->
+                                <div class="bg-white/10 backdrop-blur-md p-8 rounded-2xl border border-white/20">
+                                    <h3 class="text-2xl font-bold mb-6 flex items-center gap-3 border-r-4 border-white pr-4">٢. ممارسة الرياضة بانتظام</h3>
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                        <div class="space-y-4">
+                                            <p class="text-lg font-bold">النشاط البدني الموصى به:</p>
+                                            <ul class="space-y-2 text-sm opacity-90">
+                                                <li>• ممارسة التمارين مثل المشي السريع، ركوب الدراجة، والسباحة.</li>
+                                                <li>• تخصيص ٣٠ إلى ٦٠ دقيقة يومياً معظم أيام الأسبوع.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="space-y-4">
+                                            <p class="text-lg font-bold">إرشادات هامة:</p>
+                                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                                                <li class="bg-medical-teal-dark/30 p-3 rounded-lg flex items-center gap-2"><i data-lucide="timer" class="w-4 h-4 shrink-0 font-bold"></i> الإحماء</li>
+                                                <li class="bg-medical-teal-dark/30 p-3 rounded-lg flex items-center gap-2"><i data-lucide="activity" class="w-4 h-4 shrink-0"></i> تمارين هوائية</li>
+                                                <li class="bg-medical-teal-dark/30 p-3 rounded-lg flex items-center gap-2"><i data-lucide="microscope" class="w-4 h-4 shrink-0"></i> متابعة السكر</li>
+                                                <li class="bg-medical-teal-dark/30 p-3 rounded-lg flex items-center gap-2"><i data-lucide="glass-water" class="w-4 h-4 shrink-0"></i> شرب الماء</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Lifestyle (3, 4, 5, 6) -->
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                                        <h4 class="font-bold mb-2">٣. الوزن الصحي</h4>
+                                        <p class="text-xs opacity-70">الحفاظ على وزن مناسب يقلل خطر السكري.</p>
+                                    </div>
+                                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                                        <h4 class="font-bold mb-2">٤. تقليل التوتر</h4>
+                                        <p class="text-xs opacity-70">تقنيات الاسترخاء للسيطرة على الهرمونات.</p>
+                                    </div>
+                                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
+                                        <h4 class="font-bold mb-2">٥. زيارات الطبيب</h4>
+                                        <p class="text-xs opacity-70">فحوصات دورية بانتظام.</p>
+                                    </div>
+                                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 border-l-4 border-l-red-400">
+                                        <h4 class="font-bold mb-2">٦. الامتناع عن التدخين</h4>
+                                        <p class="text-xs opacity-70">لتجنب المضاعفات الوعائية والقلبية.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Complications -->
+                <section id="complications" class="slide-up">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-8 border-r-4 border-medical-teal pr-6">المضاعفات</h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+                            <h4 class="font-bold text-slate-900 mb-2">القلب والأوعية</h4>
+                            <p class="text-xs text-slate-500">خطر السكتات وأمراض الشرايين.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+                            <h4 class="font-bold text-slate-900 mb-2">الكلى</h4>
+                            <p class="text-xs text-slate-500">تلف وظائف الكلى الحيوية.</p>
+                        </div>
+                        <div class="p-6 bg-white rounded-2xl shadow-sm border border-slate-100">
+                            <h4 class="font-bold text-slate-900 mb-2">العين</h4>
+                            <p class="text-xs text-slate-500">اعتلال الشبكية وفقدان البصر.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Diabetic Foot - Comprehensive Section -->
+                <section id="diabetic-foot" class="bg-medical-blue-deep text-white p-8 md:p-20 rounded-2xl slide-up overflow-hidden relative border-t border-white/10">
+                    <div class="absolute top-0 left-0 w-96 h-96 bg-medical-blue/10 blur-[120px] rounded-full -translate-x-1/2 -translate-y-1/2"></div>
+                    <div class="absolute bottom-0 right-0 w-96 h-96 bg-medical-teal/5 blur-[120px] rounded-full translate-x-1/2 translate-y-1/2"></div>
+                    
+                    <div class="relative z-10 max-w-7xl mx-auto">
+                        <div class="text-right mb-16 border-r-8 border-medical-blue-light pr-6">
+                            <h2 class="text-4xl md:text-6xl font-bold mb-4 text-white">القدم السكرى</h2>
+                            <div class="h-1.5 w-48 bg-medical-blue-light rounded-full"></div>
+                        </div>
+
+                        <!-- 1. التعريف -->
+                        <div class="mb-16 bg-white/5 p-8 md:p-12 rounded-2xl border border-white/10 shadow-xl">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-6 flex items-center gap-3 text-medical-blue-light">
+                                <i data-lucide="info" class="w-8 h-8"></i> تعريف
+                            </h3>
+                            <p class="text-lg md:text-xl text-slate-200 leading-relaxed text-right">
+                                القدم السكرية هي حالة تصيب الأشخاص الذين يعانون من مرض السكري، حيث تحدث تغيرات في الأعصاب والأوعية الدموية في القدمين، مما يزيد من خطر تلف الأنسجة وتكون الجروح والقرح.
+                            </p>
+                        </div>
+
+                        <!-- 2. الأسباب -->
+                        <div class="mb-16">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-10 flex items-center gap-3 text-medical-blue-light justify-end">
+                                الاسباب <i data-lucide="search" class="w-8 h-8"></i>
+                            </h3>
+                            <p class="text-lg mb-8 opacity-90 text-right">الأسباب الرئيسية للقدم السكرية تشمل:</p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 text-right hover:bg-white/10 transition-all">
+                                    <h4 class="font-bold text-xl mb-4 text-white">ارتفاع السكر:</h4>
+                                    <p class="text-sm text-slate-400 leading-relaxed">يؤدي ارتفاع السكر لفترة طويلة إلى تلف الأعصاب الطرفية والأوعية الدموية بالقدمين.</p>
+                                </div>
+                                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 text-right hover:bg-white/10 transition-all">
+                                    <h4 class="font-bold text-xl mb-4 text-white">الأوعية الدموية:</h4>
+                                    <p class="text-sm text-slate-400 leading-relaxed">يسبب السكري تصلب الشرايين وتضيقها، مما يضعف تدفق الدم للأطراف والقدمين.</p>
+                                </div>
+                                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 text-right hover:bg-white/10 transition-all">
+                                    <h4 class="font-bold text-xl mb-4 text-white">تلف الأعصاب:</h4>
+                                    <p class="text-sm text-slate-400 leading-relaxed">(عصب السكري) يقلل الإحساس في القدمين مما يجعلك عرضة للإصابة دون شعور.</p>
+                                </div>
+                                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 text-right hover:bg-white/10 transition-all">
+                                    <h4 class="font-bold text-xl mb-4 text-white">الالتهابات:</h4>
+                                    <p class="text-sm text-slate-400 leading-relaxed">انخفاض الإحساس يجعل المريض لا يلاحظ القرح، مما يزيد خطر العدوى وتفاقم الحالة.</p>
+                                </div>
+                                <div class="bg-white/5 p-8 rounded-2xl border border-white/10 text-right lg:col-span-2 hover:bg-white/10 transition-all">
+                                    <h4 class="font-bold text-xl mb-4 text-white">تغيرات الجلد والأظافر:</h4>
+                                    <p class="text-sm text-slate-400 leading-relaxed">تغير طبيعة الجلد والأظافر يزيد من احتمالية حدوث تشققات وتقرحات خطيرة.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. الأعراض -->
+                        <div class="mb-16 bg-white/5 p-8 md:p-12 rounded-2xl border border-white/10">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-10 flex items-center gap-3 text-medical-blue-light justify-end">
+                                الاعراض <i data-lucide="alert-circle" class="w-8 h-8"></i>
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-right">
+                                <ul class="space-y-6">
+                                    <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
+                                        <h4 class="font-bold text-lg mb-2">التنميل والخدر</h4>
+                                        <p class="text-sm opacity-80">الشعور بالألم المزمن أو فقدان الإحساس التام.</p>
+                                    </li>
+                                    <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
+                                        <h4 class="font-bold text-lg mb-2">القروح والجروح</h4>
+                                        <p class="text-sm opacity-80">تلك التي لا تلتئم بسرعة أو تتفاقم مع الوقت.</p>
+                                    </li>
+                                    <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
+                                        <h4 class="font-bold text-lg mb-2">تغيرات لون الجلد</h4>
+                                        <p class="text-sm opacity-80">ظهور بقع داكنة أو حمراء تدل على مشكلة في الدورة الدموية.</p>
+                                    </li>
+                                </ul>
+                                <ul class="space-y-6">
+                                    <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
+                                        <h4 class="font-bold text-lg mb-2">التورم في القدمين</h4>
+                                        <p class="text-sm opacity-80">يحدث غالباً بسبب احتباس السوائل أو الالتهاب النشط.</p>
+                                    </li>
+                                    <li class="bg-black/20 p-6 rounded-xl border-r-4 border-medical-blue-light">
+                                        <h4 class="font-bold text-lg mb-2">الإصابات المتكررة</h4>
+                                        <p class="text-sm opacity-80">التعرض لإصابات متكررة بسبب ضعف الإحساس الوقائي بالألم.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 4. التشخيص -->
+                        <div class="mb-16">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-10 flex items-center gap-3 text-medical-blue-light justify-end">
+                                التشخيص <i data-lucide="stethoscope" class="w-8 h-8"></i>
+                            </h3>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-right">
+                                <div class="p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-medical-blue-light transition-all shadow-lg">
+                                    <h4 class="font-bold text-xl mb-4 text-white">فحص القدمين:</h4>
+                                    <p class="text-sm text-slate-400">البحث عن علامات جروح، تغيرات جلدية، تورم، أو تغير في شكل القدم.</p>
+                                </div>
+                                <div class="p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-medical-blue-light transition-all shadow-lg">
+                                    <h4 class="font-bold text-xl mb-4 text-white">التاريخ الطبي:</h4>
+                                    <p class="text-sm text-slate-400">مراجعة تاريخ السكري وأي مشاكل سابقة في الأطراف السفلية.</p>
+                                </div>
+                                <div class="p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-medical-blue-light transition-all shadow-lg">
+                                    <h4 class="font-bold text-xl mb-4 text-white">اختبارات الأعصاب:</h4>
+                                    <p class="text-sm text-slate-400">قياس كفاءة الأعصاب والتأكد من عدم وجود تلف في الأعصاب الطرفية.</p>
+                                </div>
+                                <div class="p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-medical-blue-light transition-all shadow-lg">
+                                    <h4 class="font-bold text-xl mb-4 text-white">الدورة الدموية:</h4>
+                                    <p class="text-sm text-slate-400">قياس ضغط الدم في الكاحل وتقييم تدفق الدم (دوبلر) للقدمين.</p>
+                                </div>
+                                <div class="p-8 bg-white/5 rounded-2xl border border-white/5 hover:border-medical-blue-light transition-all shadow-lg">
+                                    <h4 class="font-bold text-xl mb-4 text-white">الأشعة الشعاعية:</h4>
+                                    <p class="text-sm text-slate-400">عمل أشعة سينية لفحص العظام والتأكد من عدم وجود كسور أو تشوهات عظمية.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5. العلاج -->
+                        <div class="mb-16 bg-white rounded-2xl p-8 md:p-16 text-slate-900 shadow-2xl">
+                            <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center text-medical-blue-deep border-b-4 border-medical-blue-light pb-4 inline-block w-full">خطة العلاج</h2>
+                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                                <div class="space-y-10 text-right">
+                                    <section>
+                                        <h4 class="text-2xl font-bold text-medical-blue mb-6 flex items-center justify-end gap-2">أولًا: الإجراءات العامة <i data-lucide="check-circle" class="w-6 h-6"></i></h4>
+                                        <ul class="space-y-4 text-slate-600">
+                                            <li class="flex items-center justify-end gap-2">ضبط مستوى السكر في الدم بشكل صارم •</li>
+                                            <li class="flex items-center justify-end gap-2">تقليل الضغط على القدم المصابة (إراحتها) •</li>
+                                            <li class="flex items-center justify-end gap-2">رفع القدم لتقليل التورم •</li>
+                                            <li class="flex items-center justify-end gap-2">تجنب المشي على القدم في حالة وجود قرحة •</li>
+                                        </ul>
+                                    </section>
+                                    <section>
+                                        <h4 class="text-2xl font-bold text-medical-blue mb-6 flex items-center justify-end gap-2">ثانيًا: العلاج الدوائي <i data-lucide="pill" class="w-6 h-6"></i></h4>
+                                        <ul class="space-y-4 text-slate-600">
+                                            <li class="flex items-center justify-end gap-2">استخدام المضادات الحيوية في حالة العدوى •</li>
+                                            <li class="flex items-center justify-end gap-2">استخدام المسكنات لتخفيف الألم •</li>
+                                            <li class="flex items-center justify-end gap-2">الاستمرار الصارم على علاج السكر •</li>
+                                            <li class="flex items-center justify-end gap-2">أدوية تحسين الدورة الدموية حسب الحالة •</li>
+                                        </ul>
+                                    </section>
+                                    <section>
+                                        <h4 class="text-2xl font-bold text-medical-blue mb-6 flex items-center justify-end gap-2">ثالثًا: العناية بالجرح <i data-lucide="droplet" class="w-6 h-6"></i></h4>
+                                        <ul class="space-y-4 text-slate-600">
+                                            <li class="flex items-center justify-end gap-2">تنظيف الجرح يومياً بمحلول معقم •</li>
+                                            <li class="flex items-center justify-end gap-2">إزالة الأنسجة الميتة (تنظيف جراحي) •</li>
+                                            <li class="flex items-center justify-end gap-2">استخدام ضمادات معقمة متخصصة •</li>
+                                            <li class="flex items-center justify-end gap-2">متابعة الجرح لمنع حدوث تدهور •</li>
+                                        </ul>
+                                    </section>
+                                </div>
+                                <div class="space-y-10 text-right">
+                                    <section>
+                                        <h4 class="text-2xl font-bold text-medical-blue mb-6 flex items-center justify-end gap-2">رابعًا: العلاج غير الدوائي <i data-lucide="pills" class="w-6 h-6"></i></h4>
+                                        <ul class="space-y-4 text-slate-600">
+                                            <li class="flex items-center justify-end gap-2">ارتداء أحذية طبية مريحة ومناسبة •</li>
+                                            <li class="flex items-center justify-end gap-2">تجنب أي ضغط أو احتكاك على مكان الجرح •</li>
+                                            <li class="flex items-center justify-end gap-2">الاهتمام اليومي بنظافة القدم وتجفيفها •</li>
+                                            <li class="flex items-center justify-end gap-2">ترطيب الجلد مع تجنب ما بين الأصابع •</li>
+                                        </ul>
+                                    </section>
+                                    <section class="bg-red-50 p-8 rounded-2xl border-r-8 border-red-500 shadow-inner">
+                                        <h4 class="text-2xl font-bold text-red-600 mb-6 flex items-center justify-end gap-2">خامسًا: العلاج الجراحي <i data-lucide="scissors" class="w-6 h-6"></i></h4>
+                                        <p class="font-bold mb-4 text-slate-800 underline">يُستخدم في الحالات الشديدة مثل:</p>
+                                        <ul class="space-y-4 text-slate-700 font-medium">
+                                            <li class="flex items-center justify-end gap-2">- وجود غرغرينا (تعفن الأنسجة)</li>
+                                            <li class="flex items-center justify-end gap-2">- التهابات شديدة لا تستجيب للعلاج</li>
+                                            <li class="text-red-700 font-bold border-t border-red-200 pt-4 mt-4">يشمل تنظيف جراحي للجرح أو بتر جزئي في الحالات المتقدمة جدًا لحماية حياة المريض.</li>
+                                        </ul>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6. مضاعفات -->
+                        <div class="mb-16">
+                            <h3 class="text-2xl md:text-3xl font-bold mb-10 flex items-center gap-3 text-red-400 justify-end">
+                                مضاعفات خطيرة <i data-lucide="alert-triangle" class="w-8 h-8"></i>
+                            </h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-right">
+                                <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
+                                    <h4 class="text-xl font-bold mb-3 text-red-200">التقرحات المزمنة</h4>
+                                    <p class="text-sm opacity-80 text-slate-300">قروح عميقة قد تصل إلى الأوتار أو العظام وتصعب السيطرة عليها.</p>
+                                </div>
+                                <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
+                                    <h4 class="text-xl font-bold mb-3 text-red-200">الالتهابات الميكروبية</h4>
+                                    <p class="text-sm opacity-80 text-slate-300">خراجات صديدية تحت الجلد تتطلب تدخلاً جراحياً فورياً تحت التخدير.</p>
+                                </div>
+                                <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
+                                    <h4 class="text-xl font-bold mb-3 text-red-200">التهاب العظام</h4>
+                                    <p class="text-sm opacity-80 text-slate-300">انتقال العدوى لعظام القدم مما قد يهدد بسلامة الساق بأكملها.</p>
+                                </div>
+                                <div class="bg-white/5 p-8 rounded-2xl border border-red-500/20 hover:bg-red-500/10 transition-colors">
+                                    <h4 class="text-xl font-bold mb-3 text-red-200">تشوهات القدم</h4>
+                                    <p class="text-sm opacity-80 text-slate-300">انهيار عظام القدم (قدم شاركو) مما يغير شكلها بشكل دائم.</p>
+                                </div>
+                                <div class="bg-red-900/20 p-8 rounded-2xl border-2 border-red-600/50 hover:bg-red-700/20 transition-colors lg:col-span-2">
+                                    <h4 class="text-2xl font-bold mb-3 text-red-400">الغرغرينا والبتر</h4>
+                                    <p class="text-sm opacity-90 leading-relaxed text-slate-200">الغرغرينا هي أخطر المضاعفات عند موت الأنسجة تماماً. البتر هو الخيار الطبي الأخير لحماية المريض ومنع انتشار السموم لباقي الجسم.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7. وقاية -->
+                        <div class="bg-gradient-to-br from-medical-blue-deep to-medical-blue p-8 md:p-16 rounded-2xl border border-white/20 relative shadow-2xl overflow-hidden">
+                            <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5"></div>
+                            <div class="relative z-10 text-right">
+                                <h3 class="text-3xl md:text-5xl font-bold mb-8 text-white text-center">الوقاية: حجر الزاوية</h3>
+                                <div class="bg-white/10 p-6 rounded-xl mb-12 text-center inline-block w-full border border-white/20">
+                                    <p class="text-xl md:text-2xl font-bold text-medical-teal-light">
+                                        ٨٥٪ من حالات البتر كان يمكن تجنبها باتباع إرشادات وقائية بسيطة
+                                    </p>
+                                </div>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                                    <!-- 1 -->
+                                    <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+                                        <h4 class="text-2xl font-bold mb-6 border-r-4 border-medical-teal-light pr-4 text-white">١. الرقابة والفحص اليومي</h4>
+                                        <ul class="space-y-4 text-sm text-slate-200">
+                                            <li><strong class="text-medical-teal-light block">- المعاينة البصرية:</strong> فحص القدمين يومياً قبل النوم بحثاً عن جروح، تورم، أو فقاعات.</li>
+                                            <li><strong class="text-medical-teal-light block">- استخدام المرآة:</strong> لرؤية باطن القدم بوضوح، أو طلب المساعدة من الأهل.</li>
+                                            <li><strong class="text-medical-teal-light block">- تحسس الحرارة:</strong> ملاحظة أي مناطق ساخنة قد تشير لبداية التهاب داخلي.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 2 -->
+                                    <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+                                        <h4 class="text-2xl font-bold mb-6 border-r-4 border-medical-teal-light pr-4 text-white">٢. العناية بالبشرة والنظافة</h4>
+                                        <ul class="space-y-4 text-sm text-slate-200">
+                                            <li><strong class="text-medical-teal-light block">- غسل القدمين:</strong> يومياً بماء فاتر وصابون طبي، واختبار الحرارة بالكوع (ليس بالقدم).</li>
+                                            <li><strong class="text-medical-teal-light block">- التجفيف التام:</strong> أهم خطوة للوقاية من الفطريات، خاصة بين الأصابع بلطف شديد.</li>
+                                            <li><strong class="text-medical-teal-light block">- الترطيب:</strong> استخدام الكريمات للقدمين لمنع التشققات، مع تجنب ما بين الأصابع نهائياً.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 3 -->
+                                    <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+                                        <h4 class="text-2xl font-bold mb-6 border-r-4 border-medical-teal-light pr-4 text-white">٣. العناية بالأظافر</h4>
+                                        <p class="text-sm text-slate-200 leading-relaxed mb-4">قص الأظافر بشكل مستقيم وليس دائرتاً، وتجنب قص الزوايا بعمق لمنع نمو الظفر تحت اللحم.</p>
+                                        <p class="text-xs text-medical-teal-light italic">* في حال ضعف البصر يجب استدعاء شخص آخر لقص الأظافر.</p>
+                                    </div>
+                                    <!-- 4 -->
+                                    <div class="bg-white/5 p-8 rounded-2xl border border-white/10 hover:bg-white/10 transition-all">
+                                        <h4 class="text-2xl font-bold mb-6 border-r-4 border-medical-teal-light pr-4 text-white">٤. الملابس والأحذية</h4>
+                                        <ul class="space-y-3 text-sm text-slate-200">
+                                            <li><strong class="text-medical-teal-light">الجوارب:</strong> قطنية نظيفة دائماً، واسعة لا تضغط على الساق لضمان تدفق الدم.</li>
+                                            <li><strong class="text-medical-teal-light">الحذاء الطبي:</strong> واسع من الأمام ومصنوع من مواد تسمح بالتهوية.</li>
+                                            <li><strong class="text-medical-teal-light">فحص الحذاء:</strong> فحصه من الداخل باليد قبل الارتداء للتأكد من خلوه من مسامير أو أحجار.</li>
+                                            <li class="bg-red-500/20 p-4 rounded-lg font-bold text-white border border-red-500/40">يمنع المشي حافياً منعاً باتاً داخل أو خارج المنزل لتجنب الإصابات المفاجئة.</li>
+                                        </ul>
+                                    </div>
+                                    <!-- 5 -->
+                                    <div class="bg-white/15 p-10 rounded-2xl border-2 border-white/30 md:col-span-2">
+                                        <h4 class="text-2xl font-bold mb-8 text-center text-white border-b-2 border-white/10 pb-4">٥. التحكم في الصحة العامة</h4>
+                                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 text-center">
+                                            <div class="space-y-3">
+                                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto"><i data-lucide="check-circle" class="w-6 h-6"></i></div>
+                                                <p class="font-bold">ضبط سكر الدم</p>
+                                            </div>
+                                            <div class="space-y-3">
+                                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto"><i data-lucide="ban" class="w-6 h-6"></i></div>
+                                                <p class="font-bold">الإقلاع عن التدخين</p>
+                                            </div>
+                                            <div class="space-y-3">
+                                                <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto"><i data-lucide="calendar" class="w-6 h-6"></i></div>
+                                                <p class="font-bold">الفحص الدوري المختص</p>
+                                            </div>
+                                        </div>
+                                        <p class="mt-10 text-lg text-center font-medium bg-medical-teal-dark/50 p-4 rounded-xl">يجب فحص القدمين بواسطة مختص مرة كل ثلاثة أشهر على الأقل، حتى في عدم وجود أي شكوى.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Final Message -->
+                <section class="text-center py-12 border-t border-slate-100 slide-up">
+                    <p class="text-slate-500 italic max-w-2xl mx-auto">تذكر دائماً أن الالتزام ببروتوكول العلاج ونمط الحياة الصحي هو مفتاحك لحياة مديدة وخالية من المضاعفات بإذن الله.</p>
+                </section>
+
             </div>
         </div>
     </div>
+
 
     <!-- Footer -->
     <footer id="footer" class="bg-medical-grey border-t border-slate-200 pt-20 pb-10 mt-20 scroll-mt-20">
