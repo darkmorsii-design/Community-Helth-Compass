@@ -25,6 +25,12 @@
                             'blue-light': '#00A1D6',
                             'blue-deep': '#004157',
                             grey: '#f5f5f5',
+                        },
+                        obesity: {
+                            primary: '#f97316', // Orange-500
+                            secondary: '#fb923c', // Orange-400
+                            dark: '#c2410c', // Orange-700
+                            light: '#fff7ed', // Orange-50
                         }
                     }
                 }
@@ -47,12 +53,19 @@
             max-height: 400px;
             opacity: 1;
         }
+        .bmi-card {
+            transition: all 0.3s ease;
+        }
+        .bmi-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(249, 115, 22, 0.2);
+        }
     </style>
 </head>
 <body class="bg-white text-slate-800 antialiased font-sans">
 
     <!-- Navigation -->
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-medical-teal-light">
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-medical-teal-light shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20">
                 <div class="flex items-center">
@@ -60,19 +73,19 @@
                         <div class="bg-medical-teal-light p-2 rounded-lg group-hover:bg-medical-teal transition-colors">
                             <i data-lucide="compass" class="w-6 h-6 text-medical-teal group-hover:text-white"></i>
                         </div>
-                        <span class="text-xl font-bold text-medical-teal-dark tracking-tight">بوصلة صحة المجتمع</span>
+                        <span class="text-xl font-bold text-medical-blue tracking-tight">بوصلة صحة المجتمع</span>
                     </a>
                 </div>
 
                 <!-- Desktop Links -->
-                <div class="hidden md:flex items-center gap-8 font-medium">
+                <div class="hidden md:flex items-center gap-8 font-medium text-right">
                     <a href="index.html" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
                         الرئيسية
                     </a>
-                    <a href="index.html#health-topics" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                    <a href="index.html#health-topics" class="text-slate-600 hover:text-medical-teal transition-colors relative group text-right">
                         الموضوعات الصحية
                     </a>
-                    <a href="index.html#social-awareness" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                    <a href="index.html#social-awareness" class="text-slate-600 hover:text-medical-teal transition-colors relative group text-right">
                         الموضوعات الاجتماعية
                     </a>
                 </div>
@@ -88,108 +101,350 @@
 
         <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden bg-white border-b border-medical-teal-light">
-            <div class="px-4 pt-2 pb-6 space-y-1">
-                <a href="index.html" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الرئيسية</a>
-                <a href="index.html#health-topics" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الصحية</a>
-                <a href="index.html#social-awareness" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الاجتماعية</a>
+            <div class="px-4 pt-2 pb-6 space-y-1 text-right">
+                <a href="index.html" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-teal-light transition-colors">الرئيسية</a>
+                <a href="index.html#health-topics" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-teal-light transition-colors">الموضوعات الصحية</a>
+                <a href="index.html#social-awareness" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-teal-light transition-colors">الموضوعات الاجتماعية</a>
             </div>
         </div>
     </nav>
 
-    <!-- Page Header -->
-    <header class="bg-orange-50 py-24 border-b border-orange-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center slide-up">
-            <h1 class="text-4xl md:text-6xl font-bold text-orange-800 mb-6 font-primary">مكافحة السمنة: نحو نمط حياة صحي</h1>
-            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">فهم مسببات السمنة، مخاطرها الصحية، وكيفية تبني عادات غذائية ورياضية مستدامة لاستعادة الرشاقة والحيوية.</p>
+    <!-- Hero Header -->
+    <header class="bg-gradient-to-br from-obesity-light via-white to-orange-100 py-24 md:py-32 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-obesity-primary/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 slide-up">
+            <h1 class="font-bold text-obesity-dark mb-8 leading-tight">
+                <span class="block md:inline text-5xl md:text-6xl">السمنة</span>
+                <span class="hidden md:inline text-6xl"> : </span>
+                <span class="block md:inline text-2xl md:text-6xl mt-4 md:mt-0">خطر صامت يهدد صحتك</span>
+                <span class="block md:inline text-2xl md:text-6xl mt-2 md:mt-0"><span class="hidden md:inline"> ... </span>وكيف تقي نفسك منه ؟</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed font-medium">
+                اكتشف الطريق نحو حياة أكثر حيوية وتوازناً.. ابدأ رحلة التغيير الآن وامنح جسمك الرعاية التي يستحقها.
+            </p>
         </div>
     </header>
 
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16">
-            <!-- Content -->
-            <div class="lg:col-span-2 space-y-20 text-right">
-                <section class="slide-up">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-4">
-                        <i data-lucide="scale" class="w-8 h-8 text-orange-600"></i> ما هي السمنة؟
-                    </h2>
-                    <div class="text-lg text-slate-600 leading-[1.8] space-y-6">
-                        <p>السمنة ليست مجرد مسألة مظهر خارجي، بل هي مرض مزمن يتضمن تراكمًا مفرطًا للدهون في الجسم مما يؤدي إلى مشاكل صحية خطيرة ويزيد من خطر الإصابة بأمراض أخرى مثل السكري وأمراض القلب.</p>
-                        <div class="bg-medical-grey p-10 rounded-xl border border-orange-100">
-                            <h3 class="font-bold text-orange-800 mb-6 text-xl underline decoration-2 underline-offset-8 decoration-orange-200">الأسباب الشائعة للسمنة:</h3>
-                            <div class="space-y-6">
-                                <div class="flex gap-4">
-                                    <div class="bg-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">١</div>
-                                    <p><span class="font-bold text-slate-900 text-lg">الخمول البدني:</span> عدم ممارسة أي نشاط رياضي أو الجلوس لفترات طويلة أمام الشاشات.</p>
-                                </div>
-                                <div class="flex gap-4">
-                                    <div class="bg-orange-600 text-white w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 font-bold">٢</div>
-                                    <p><span class="font-bold text-slate-900 text-lg">العادات الغذائية غير الصحية:</span> الاعتماد على الوجبات السريعة، السكريات المفرطة، والمشروبات الغازية.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="slide-up" style="animation-delay: 0.2s;">
-                    <div class="rounded-2xl overflow-hidden shadow-2xl h-[500px] border-4 border-orange-50">
-                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&q=80&w=1280" class="w-full h-full object-cover" loading="lazy" referrerPolicy="no-referrer">
-                    </div>
-                    <p class="text-center mt-6 italic text-slate-500">التغيير البسيط والمستمر هو مفتاح النجاح في رحلة فقدان الوزن.</p>
-                </section>
-
-                <section class="slide-up" style="animation-delay: 0.3s;">
-                    <h2 class="text-3xl font-bold text-slate-900 mb-8 flex items-center gap-4">
-                        <i data-lucide="apple" class="w-8 h-8 text-emerald-600"></i> نصائح للوقاية والعلاج
-                    </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <div class="bg-emerald-50 p-8 rounded-xl border border-emerald-100">
-                            <h4 class="font-bold text-emerald-900 mb-3 text-xl">١. التغذية المتوازنة</h4>
-                            <p class="text-slate-600">زيادة استهلاك الخضروات والفواكه، والتقليل من الكربوهيدرات والدهون المشبعة.</p>
-                        </div>
-                        <div class="bg-emerald-50 p-8 rounded-xl border border-emerald-100">
-                            <h4 class="font-bold text-emerald-900 mb-3 text-xl">٢. النشاط البدني</h4>
-                            <p class="text-slate-600">المشي لمدة لـ ٣٠ دقيقة يومياً على الأقل يعطي نتائج مذهلة بمرور الوقت.</p>
-                        </div>
-                        <div class="bg-emerald-50 p-8 rounded-xl border border-emerald-100">
-                            <h4 class="font-bold text-emerald-900 mb-3 text-xl">٣. شرب الماء</h4>
-                            <p class="text-slate-600">شرب كميات كافية من الماء يحسن عملية التمثيل الغذائي ويقلل الشعور بالجوع.</p>
-                        </div>
-                        <div class="bg-emerald-50 p-8 rounded-xl border border-emerald-100">
-                            <h4 class="font-bold text-emerald-900 mb-3 text-xl">٤. كفاية النوم</h4>
-                            <p class="text-slate-600">النوم المنتظم يساعد في تنظيم الهرمونات المسؤولة عن الجوع والشبع.</p>
-                        </div>
-                    </div>
-                </section>
+    <main class="py-16 space-y-24">
+        <!-- Definition Section -->
+        <section class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center slide-up">
+            <div class="bg-obesity-light/50 p-8 md:p-12 rounded-[2rem] border border-obesity-light">
+                <h2 class="text-3xl font-bold text-obesity-dark mb-6">ما هي السمنة؟</h2>
+                <p class="text-lg md:text-xl text-slate-600 leading-relaxed font-medium">
+                    السمنة هي تراكم مفرط للدهون في الجسم يؤثر سلبًا على الصحة، وقد يزيد من خطر الإصابة بالعديد من الأمراض المزمنة مثل أمراض القلب والسكري وارتفاع ضغط الدم. وهي حالة طبية تتطلب الوعي والعمل للوقاية من مضاعفاتها.
+                </p>
             </div>
-
-            <!-- Sidebar -->
-            <div class="space-y-10 shrink-0">
-                <div class="bg-white p-10 rounded-xl border border-orange-100 shadow-xl sticky top-28 text-right">
-                    <h3 class="text-2xl font-bold text-orange-800 mb-10 pb-4 border-b border-orange-100">معلومات هامة</h3>
-                    <div class="space-y-10">
-                        <div class="flex gap-5">
-                            <div class="bg-orange-50 p-4 rounded-lg"><i data-lucide="info" class="text-orange-700"></i></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 mb-1">مؤشر كتلة الجسم (BMI)</h4>
-                                <p class="text-sm text-slate-600 leading-relaxed">هو أداة بسيطة لتقييم وزنك بالنسبة لطولك، استشر طبيبك لمعرفة نطاقك الصحي.</p>
-                            </div>
+        </section>
+        <!-- Statistics Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Global Stats -->
+                <div class="bg-white p-8 rounded-3xl border border-obesity-light shadow-xl shadow-obesity-primary/5 slide-up">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="bg-obesity-primary/10 p-3 rounded-2xl">
+                            <i data-lucide="globe" class="w-8 h-8 text-obesity-primary"></i>
                         </div>
-                        <div class="flex gap-5">
-                            <div class="bg-medical-teal-light p-4 rounded-lg"><i data-lucide="stethoscope" class="text-medical-teal"></i></div>
-                            <div>
-                                <h4 class="font-bold text-slate-900 mb-1">استشر مختصاً</h4>
-                                <p class="text-sm text-slate-600 leading-relaxed">قبل البدء في أي حمية غذائية حادة أو برنامج رياضي مكثف.</p>
-                            </div>
+                        <h2 class="text-2xl font-bold text-slate-900 text-right">نسبة انتشار السمنة عالميًا</h2>
+                    </div>
+                    <p class="text-sm text-slate-500 mb-6 font-medium text-right underline underline-offset-4 decoration-obesity-primary/30">وفقًا لتقديرات World Obesity Federation</p>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-5 bg-obesity-light/50 p-6 rounded-2xl border border-obesity-light">
+                            <div class="bg-white p-3 rounded-xl shadow-sm"><i data-lucide="users" class="w-6 h-6 text-obesity-primary"></i></div>
+                            <p class="text-lg font-bold text-slate-800 text-right">أكثر من 1 مليار شخص حول العالم يعانون من السمنة</p>
+                        </div>
+                        <div class="flex items-center gap-5 bg-obesity-light/50 p-6 rounded-2xl border border-obesity-light">
+                            <div class="bg-white p-3 rounded-xl shadow-sm"><i data-lucide="user-check" class="w-6 h-6 text-obesity-primary"></i></div>
+                            <p class="text-lg font-bold text-slate-800 text-right">حوالي 1 من كل 8 أشخاص عالميًا مصاب بالسمنة</p>
+                        </div>
+                        <div class="flex items-center gap-5 bg-obesity-light/50 p-6 rounded-2xl border border-obesity-light">
+                            <div class="bg-white p-3 rounded-xl shadow-sm"><i data-lucide="trending-up" class="w-6 h-6 text-obesity-primary"></i></div>
+                            <p class="text-lg font-bold text-slate-800 text-right">سمنة الأطفال والمراهقين تضاعفت أكثر من 4 مرات منذ عام 1975</p>
                         </div>
                     </div>
-                    <div class="mt-12 bg-orange-700 text-white p-8 rounded-xl text-center shadow-lg">
-                        <p class="text-sm mb-4 font-medium opacity-90">صحتك هي استثمارك الحقيقي</p>
-                        <a href="mailto:Example@gmail.com" class="font-bold border-b-2 border-white/50 hover:border-white transition-all text-lg">تواصل مع خبير تغذية</a>
+                </div>
+
+                <!-- Egypt Stats -->
+                <div class="bg-obesity-dark text-white p-8 md:p-12 rounded-3xl shadow-2xl relative overflow-hidden slide-up" style="animation-delay: 0.2s">
+                    <div class="absolute top-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+                    <div class="relative z-10 text-right">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-8 border-r-4 border-obesity-primary pr-4">نسبة انتشار السمنة في مصر</h2>
+                        <p class="text-lg leading-relaxed opacity-90 mb-8">
+                            تعد مصر من أعلى الدول في معدلات السمنة في الشرق الأوسط حيث تشير أحدث بيانات (World Health Organization) إلى أن:
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                                <span class="block text-4xl font-bold mb-2 text-white">44.27%</span>
+                                <p class="text-sm font-medium">نسبة السمنة بين البالغين عام 22</p>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 font-bold">
+                                <span class="block text-4xl font-bold mb-2 text-white">73.35%</span>
+                                <p class="text-sm font-medium">نسبة زيادة الوزن والسمنة معًا</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <!-- Causes Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 slide-up">
+            <h2 class="text-3xl font-bold text-slate-900 mb-12 text-center">أسباب السمنة</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg text-center hover:shadow-xl transition-shadow group">
+                    <div class="w-16 h-16 bg-obesity-light rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-obesity-primary transition-colors">
+                        <i data-lucide="utensils" class="w-8 h-8 text-obesity-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">النمط الغذائي الخاطئ</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">الإفراط في الأكل – الوجبات السريعة – السكريات والحلويات المصنعة.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg text-center hover:shadow-xl transition-shadow group">
+                    <div class="w-16 h-16 bg-obesity-light rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-obesity-primary transition-colors">
+                        <i data-lucide="activity" class="w-8 h-8 text-obesity-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">قلة النشاط البدني</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">الجلوس لفترات طويلة وعدم ممارسة الرياضة بانتظام.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg text-center hover:shadow-xl transition-shadow group">
+                    <div class="w-16 h-16 bg-obesity-light rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-obesity-primary transition-colors">
+                        <i data-lucide="moon" class="w-8 h-8 text-obesity-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">اضطرابات النوم</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">قلة النوم والتوتر المستمر يؤثران على توازن الهرمونات والتمثيل الغذائي.</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-lg text-center hover:shadow-xl transition-shadow group">
+                    <div class="w-16 h-16 bg-obesity-light rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:bg-obesity-primary transition-colors">
+                        <i data-lucide="dna" class="w-8 h-8 text-obesity-primary group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-xl mb-4">العوامل الوراثية</h3>
+                    <p class="text-slate-500 text-sm leading-relaxed">تأتي كعامل مساعد وليست السبب الأساسي في أغلب الحالات المصابة.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Symptoms Section -->
+        <section class="bg-slate-50 py-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 slide-up">
+                <div class="text-right mb-16 max-w-3xl mr-auto ml-0">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">أعراض السمنة</h2>
+                    <p class="text-lg text-slate-600 leading-relaxed font-medium">
+                        السمنة لا تُعد فقط زيادة في الوزن، لكنها قد تظهر من خلال مجموعة من الأعراض الجسدية والصحية التي تشير إلى وجود مشكلة في توازن الجسم.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-right">
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-4 hover:border-obesity-primary transition-colors">
+                        <div class="bg-obesity-light p-2 rounded-lg shrink-0"><i data-lucide="move" class="w-5 h-5 text-obesity-primary"></i></div>
+                        <p class="font-bold text-slate-800">صعوبة في الحركة أو بذل مجهود بسيط</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-4 hover:border-obesity-primary transition-colors">
+                        <div class="bg-obesity-light p-2 rounded-lg shrink-0"><i data-lucide="wind" class="w-5 h-5 text-obesity-primary"></i></div>
+                        <p class="font-bold text-slate-800">ضيق في التنفس خاصة عند صعود السلالم</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-4 hover:border-obesity-primary transition-colors">
+                        <div class="bg-obesity-light p-2 rounded-lg shrink-0"><i data-lucide="droplets" class="w-5 h-5 text-obesity-primary"></i></div>
+                        <p class="font-bold text-slate-800">التعرق الزائد مع أقل نشاط</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-4 hover:border-obesity-primary transition-colors">
+                        <div class="bg-obesity-light p-2 rounded-lg shrink-0"><i data-lucide="battery-low" class="w-5 h-5 text-obesity-primary"></i></div>
+                        <p class="font-bold text-slate-800">الشعور بالتعب والإرهاق بسرعة</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-4 hover:border-obesity-primary transition-colors">
+                        <div class="bg-obesity-light p-2 rounded-lg shrink-0"><i data-lucide="anatomize" class="w-5 h-5 text-obesity-primary"></i></div>
+                        <p class="font-bold text-slate-800">آلام في المفاصل والظهر</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-4 hover:border-obesity-primary transition-colors">
+                        <div class="bg-obesity-light p-2 rounded-lg shrink-0"><i data-lucide="cloud-moon" class="w-5 h-5 text-obesity-primary"></i></div>
+                        <p class="font-bold text-slate-800">اضطرابات في النوم (الشخير أو توقف التنفس)</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-start gap-4 hover:border-obesity-primary transition-colors md:col-span-2 lg:col-span-1">
+                        <div class="bg-obesity-light p-2 rounded-lg shrink-0"><i data-lucide="ruler" class="w-5 h-5 text-obesity-primary"></i></div>
+                        <p class="font-bold text-slate-800">زيادة محيط الخصر بشكل ملحوظ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prevention Section -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 slide-up">
+            <h2 class="text-3xl font-bold text-slate-900 mb-16 text-center">طرق الوقاية من السمنة</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 text-right">
+                <!-- Nutrition -->
+                <div class="bg-emerald-50 p-8 rounded-3xl border border-emerald-100 relative group overflow-hidden">
+                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-emerald-200/30 rounded-full blur-2xl group-hover:scale-125 transition-transform"></div>
+                    <h3 class="text-2xl font-bold text-emerald-900 mb-8 border-r-4 border-emerald-500 pr-4">التغذية الصحية</h3>
+                    <ul class="space-y-4 font-medium text-slate-700">
+                        <li class="flex items-center gap-3 justify-start"><i data-lucide="check" class="w-5 h-5 text-emerald-600"></i> تناول الفواكه والخضروات يوميًا</li>
+                        <li class="flex items-center gap-3 justify-start"><i data-lucide="check" class="w-5 h-5 text-emerald-600"></i> تقليل السكر والدهون المصنعة</li>
+                        <li class="flex items-center gap-3 justify-start"><i data-lucide="check" class="w-5 h-5 text-emerald-600"></i> ضرورة شرب الماء بانتظام</li>
+                    </ul>
+                </div>
+                <!-- Physical Activity -->
+                <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100 relative group overflow-hidden">
+                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-blue-200/30 rounded-full blur-2xl group-hover:scale-125 transition-transform"></div>
+                    <h3 class="text-2xl font-bold text-blue-900 mb-8 border-r-4 border-blue-500 pr-4">النشاط البدني</h3>
+                    <ul class="space-y-4 font-medium text-slate-700">
+                        <li class="flex items-center gap-3 justify-start"><i data-lucide="check" class="w-5 h-5 text-blue-600"></i> المشي يوميًا لمدة كافية</li>
+                        <li class="flex items-center gap-3 justify-start"><i data-lucide="check" class="w-5 h-5 text-blue-600"></i> ممارسة الرياضة لمدة 30 دقيقة</li>
+                        <li class="flex items-center gap-3 justify-start"><i data-lucide="check" class="w-5 h-5 text-blue-600"></i> تمارين منزلية بسيطة</li>
+                    </ul>
+                </div>
+                <!-- Lifestyle -->
+                <div class="bg-purple-50 p-8 rounded-3xl border border-purple-100 relative group overflow-hidden">
+                    <div class="absolute -top-10 -left-10 w-32 h-32 bg-purple-200/30 rounded-full blur-2xl group-hover:scale-125 transition-transform"></div>
+                    <h3 class="text-2xl font-bold text-purple-900 mb-8 border-r-4 border-purple-500 pr-4">نمط حياة صحي</h3>
+                    <ul class="space-y-4 font-medium text-slate-700">
+                        <li class="flex items-center gap-3 justify-start"><i data-lucide="check" class="w-5 h-5 text-purple-600"></i> النوم الكافي (7-8 ساعات)</li>
+                        <li class="flex items-center gap-3 justify-start"><i data-lucide="check" class="w-5 h-5 text-purple-600"></i> تقليل الجلوس الطويل والتحرك</li>
+                        <li class="flex items-center gap-3 justify-start"><i data-lucide="check" class="w-5 h-5 text-purple-600"></i> تقليل التوتر والاسترخاء</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Children's Obesity -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-l from-obesity-primary to-orange-600 p-10 md:p-16 rounded-[2.5rem] text-white shadow-2xl relative overflow-hidden slide-up">
+                <div class="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3"></div>
+                <div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-right space-y-8">
+                        <h2 class="text-3xl md:text-4xl font-bold flex items-center justify-end gap-3 underline decoration-white/30 underline-offset-8">
+                            السمنة عند الأطفال <i data-lucide="baby" class="w-10 h-10"></i>
+                        </h2>
+                        <p class="text-lg md:text-xl font-medium opacity-90 leading-relaxed">
+                            زيادة وزن الأطفال أصبحت مشكلة متنامية ودور الأسرة مهم جدًا في حمايتهم وبناء مستقبل صحي لهم من خلال:
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                            <div class="bg-white/20 backdrop-blur-md p-6 rounded-2xl text-center border border-white/20">
+                                <i data-lucide="utensils-cross" class="w-8 h-8 mx-auto mb-3 opacity-80"></i>
+                                <p class="font-bold">تقليل الوجبات السريعة</p>
+                            </div>
+                            <div class="bg-white/20 backdrop-blur-md p-6 rounded-2xl text-center border border-white/20">
+                                <i data-lucide="footprints" class="w-8 h-8 mx-auto mb-3 opacity-80"></i>
+                                <p class="font-bold">تشجيع اللعب والحركة</p>
+                            </div>
+                            <div class="bg-white/20 backdrop-blur-md p-6 rounded-2xl text-center border border-white/20">
+                                <i data-lucide="monitor-off" class="w-8 h-8 mx-auto mb-3 opacity-80"></i>
+                                <p class="font-bold">تقليل وقت الشاشات</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hidden lg:block relative group">
+                        <img src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?auto=format&fit=crop&q=80&w=800" class="rounded-3xl shadow-2xl transform group-hover:scale-[1.02] transition-transform duration-500" alt="صحة الأطفال" referrerPolicy="no-referrer">
+                        <div class="absolute inset-0 rounded-3xl bg-obesity-primary/20"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awareness Hub -->
+        <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12 slide-up">
+            <h2 class="text-3xl font-bold text-slate-900 border-r-8 border-obesity-primary pr-6">رسالة توعوية</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-xl space-y-8">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-right">
+                        <div class="p-5 bg-obesity-light rounded-2xl border border-obesity-primary/10 hover:bg-obesity-primary hover:text-white transition-all group cursor-default">
+                            <h4 class="font-bold text-lg mb-1 group-hover:text-white transition-colors">لا تتخطى وجبة الإفطار</h4>
+                            <p class="text-xs opacity-70">لتنظيم الحرق طوال اليوم.</p>
+                        </div>
+                        <div class="p-5 bg-obesity-light rounded-2xl border border-obesity-primary/10 hover:bg-obesity-primary hover:text-white transition-all group cursor-default">
+                            <h4 class="font-bold text-lg mb-1 group-hover:text-white transition-colors">قلل الأكل ليلي</h4>
+                            <p class="text-xs opacity-70">يتباطأ الحرق في الساعات المتأخرة.</p>
+                        </div>
+                        <div class="p-5 bg-obesity-light rounded-2xl border border-obesity-primary/10 hover:bg-obesity-primary hover:text-white transition-all group cursor-default">
+                            <h4 class="font-bold text-lg mb-1 group-hover:text-white transition-colors">اختر الطعام الطبيعي</h4>
+                            <p class="text-xs opacity-70">بدل الأطعمة المصنعة والمعلبة.</p>
+                        </div>
+                        <div class="p-5 bg-obesity-light rounded-2xl border border-obesity-primary/10 hover:bg-obesity-primary hover:text-white transition-all group cursor-default">
+                            <h4 class="font-bold text-lg mb-1 group-hover:text-white transition-colors">مارس الرياضة باستمرار</h4>
+                            <p class="text-xs opacity-70">حتى لو كانت لـ ١٥-٣٠ دقيقة فقط.</p>
+                        </div>
+                    </div>
+                    <div class="bg-obesity-dark text-white p-8 rounded-2xl text-center shadow-lg border-2 border-white/10 italic">
+                        "السمنة لا تحدث في يوم واحد، وكذلك الوقاية منها تبدأ بخطوات بسيطة يومية ابدأ اليوم… بخطوة صغيرة نحو نمط حياة صحي"
+                    </div>
+                </div>
+
+                <!-- Video Section -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-800 text-right">فيديو توعوي عن مضاعفات السمنة</h3>
+                    <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl bg-black group relative">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/9euZXGyU018" title="مضاعفات السمنة" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BMI Calculator Section -->
+        <section id="bmi-calc" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24 slide-up">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">هيا احسب مؤشر كتلة جسمك الآن</h2>
+                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+                    يتم قياس السمنة غالبًا باستخدام مؤشر كتلة الجسم (BMI)، وهو مقياس يعتمد على العلاقة بين الوزن والطول. وعندما يصل مؤشر كتلة الجسم إلى 30 أو أكثر يُعتبر الشخص مصابًا بالسمنة.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                <!-- Calculator Inputs -->
+                <div class="bg-white p-8 md:p-10 rounded-3xl border border-slate-100 shadow-2xl space-y-8 bmi-card">
+                    <div class="text-right">
+                        <label for="weight" class="block font-bold text-slate-700 mb-3 text-lg">الوزن (كيلوجرام)</label>
+                        <input type="number" id="weight" placeholder="مثال: 75" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-obesity-primary text-right font-bold text-lg">
+                    </div>
+                    <div class="text-right">
+                        <label for="height" class="block font-bold text-slate-700 mb-3 text-lg">الطول (سنتيمتر)</label>
+                        <input type="number" id="height" placeholder="مثال: 170" class="w-full bg-slate-50 border border-slate-200 p-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-obesity-primary text-right font-bold text-lg">
+                    </div>
+                    <button onclick="calculateBMI()" class="w-full bg-obesity-primary text-white py-4 rounded-xl font-bold text-xl shadow-lg hover:bg-obesity-dark transition-all transform active:scale-95 flex items-center justify-center gap-3">
+                        احسب الآن <i data-lucide="calculator" class="w-6 h-6"></i>
+                    </button>
+
+                    <div id="result-container" class="hidden mt-10 p-8 border-2 border-dashed border-obesity-primary/30 rounded-2xl bg-obesity-light text-center">
+                        <p class="text-slate-500 font-bold uppercase tracking-widest text-xs mb-2">مؤشر كتلة جسمك هو</p>
+                        <div id="bmi-result" class="text-6xl font-bold text-obesity-dark leading-none mb-4">0</div>
+                        <div id="bmi-classification" class="text-xl font-bold">التصنيف</div>
+                    </div>
+                </div>
+
+                <!-- Classification Table -->
+                <div class="lg:col-span-2 overflow-hidden rounded-3xl border border-slate-100 shadow-xl">
+                    <table class="w-full text-right bg-white">
+                        <thead class="bg-slate-900 text-white">
+                            <tr>
+                                <th class="p-6 text-xl font-bold">فئة مؤشر كتلة الجسم</th>
+                                <th class="p-6 text-xl font-bold">النطاق الرقمي</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-100">
+                            <tr class="hover:bg-blue-50/50 transition-colors">
+                                <td class="p-6 font-bold text-blue-600 flex items-center gap-2 justify-start"><div class="w-3 h-3 rounded-full bg-blue-500"></div> نقص الوزن (النحافة)</td>
+                                <td class="p-6 font-medium text-left" dir="ltr">أقل من 18.5</td>
+                            </tr>
+                            <tr class="hover:bg-green-50/50 transition-colors">
+                                <td class="p-6 font-bold text-green-600 flex items-center gap-2 justify-start"><div class="w-3 h-3 rounded-full bg-green-500"></div> الوزن الطبيعي</td>
+                                <td class="p-6 font-medium text-left" dir="ltr">18.5 – 24.9</td>
+                            </tr>
+                            <tr class="hover:bg-yellow-50/50 transition-colors">
+                                <td class="p-6 font-bold text-yellow-600 flex items-center gap-2 justify-start"><div class="w-3 h-3 rounded-full bg-yellow-500"></div> زيادة الوزن</td>
+                                <td class="p-6 font-medium text-left" dir="ltr">25.0 – 29.9</td>
+                            </tr>
+                            <tr class="hover:bg-orange-50/50 transition-colors">
+                                <td class="p-6 font-bold text-orange-600 flex items-center gap-2 justify-start"><div class="w-3 h-3 rounded-full bg-orange-500"></div> السمنة - الدرجة الأولى</td>
+                                <td class="p-6 font-medium text-left" dir="ltr">30.0 – 34.9</td>
+                            </tr>
+                            <tr class="hover:bg-red-50/50 transition-colors">
+                                <td class="p-6 font-bold text-red-600 flex items-center gap-2 justify-start"><div class="w-3 h-3 rounded-full bg-red-500"></div> السمنة - الدرجة الثانية</td>
+                                <td class="p-6 font-medium text-left" dir="ltr">35.0 – 39.9</td>
+                            </tr>
+                            <tr class="hover:bg-red-100 transition-colors">
+                                <td class="p-6 font-bold text-red-700 flex items-center gap-2 justify-start"><div class="w-3 h-3 rounded-full bg-red-700"></div> السمنة المفرطة - الدرجة الثالثة</td>
+                                <td class="p-6 font-medium text-left" dir="ltr">40.0 أو أكثر</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer id="footer" class="bg-medical-grey border-t border-slate-200 pt-20 pb-10 mt-20 scroll-mt-20">
@@ -199,7 +454,7 @@
                 <div class="space-y-6">
                     <div class="flex items-center gap-2 justify-start">
                         <div class="bg-medical-teal-light p-2 rounded-md"><i data-lucide="compass" class="w-5 h-5 text-medical-teal"></i></div>
-                        <span class="text-xl font-bold text-medical-teal-dark">بوصلة صحة المجتمع</span>
+                        <span class="text-xl font-bold text-medical-blue">بوصلة صحة المجتمع</span>
                     </div>
                     <p class="text-slate-600 leading-relaxed max-w-sm">
                         منصة توعوية شاملة تهدف إلى نشر الوعي الصحي والاجتماعي الصحيح وتمكين الأفراد من بناء حياة متوازنة ومستقرة.
@@ -208,31 +463,34 @@
 
                 <!-- Quick Links -->
                 <div class="space-y-6 text-right">
-                    <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">روابط سريعة</h3>
+                    <h3 class="text-medical-blue font-bold text-sm uppercase tracking-widest">روابط سريعة</h3>
                     <ul class="space-y-4 text-slate-600 font-medium">
-                        <li><a href="index.html" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الرئيسية</a></li>
-                        <li><a href="index.html#health-topics" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الصحية</a></li>
-                        <li><a href="index.html#social-awareness" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الاجتماعية</a></li>
+                        <li><a href="index.html" class="hover:text-medical-teal transition-colors flex items-center gap-2 justify-start"><i data-lucide="chevron-left" class="w-4 h-4"></i> الرئيسية</a></li>
+                        <li><a href="index.html#health-topics" class="hover:text-medical-teal transition-colors flex items-center gap-2 justify-start"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الصحية</a></li>
+                        <li><a href="index.html#social-awareness" class="hover:text-medical-teal transition-colors flex items-center gap-2 justify-start"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الاجتماعية</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact -->
                 <div class="space-y-6 text-right font-medium">
-                    <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">تواصل معنا</h3>
+                    <h3 class="text-medical-blue font-bold text-sm uppercase tracking-widest">تواصل معنا</h3>
                     <div class="space-y-4">
                         <div class="flex items-center gap-4 text-slate-600">
-                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-5 h-5 text-medical-teal"></i></div>
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5 text-medical-teal"></i>
+                            </div>
                             <span>Example@gmail.com</span>
                         </div>
                         <div class="flex items-center gap-4 text-slate-600">
-                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 relative flex items-center justify-center shrink-0">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
                                 <i data-lucide="message-circle" class="w-5 h-5 text-medical-teal"></i>
-                                <i data-lucide="phone" class="w-2.5 h-2.5 text-medical-teal absolute" style="transform: translateY(-1px);"></i>
                             </div>
                             <a href="https://wa.me/201050919907" target="_blank" class="hover:text-medical-teal transition-colors" dir="ltr">+20 10 50919907</a>
                         </div>
                         <div class="flex items-center gap-4 text-slate-600">
-                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-medical-teal"></i></div>
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-medical-teal"></i>
+                            </div>
                             <span>جمهورية مصر العربية ، الفيوم</span>
                         </div>
                     </div>
@@ -280,6 +538,79 @@
                 }
             });
         });
+
+        // BMI Calculation Logic
+        function calculateBMI() {
+            const weight = parseFloat(document.getElementById('weight').value);
+            const heightCm = parseFloat(document.getElementById('height').value);
+            const resultContainer = document.getElementById('result-container');
+            const resultElement = document.getElementById('bmi-result');
+            const classificationElement = document.getElementById('bmi-classification');
+            const labelElement = resultContainer.querySelector('p');
+
+            // Reset and show container
+            resultContainer.classList.remove('hidden');
+            resultContainer.classList.add('flex', 'flex-col', 'items-center');
+            labelElement.innerText = "مؤشر كتلة جسمك هو";
+            
+            if (!weight || !heightCm) {
+                resultElement.innerText = "!";
+                classificationElement.innerText = "الرجاء إدخال الوزن والطول بشكل صحيح";
+                classificationElement.className = "text-xl font-bold text-red-500 mt-2";
+                labelElement.innerText = "خطأ في الإدخال";
+                return;
+            }
+
+            if (heightCm < 30 || heightCm > 250) {
+                resultElement.innerText = "!";
+                classificationElement.innerText = "الرجاء إدخال طول صحيح بين 30 و 250 سم";
+                classificationElement.className = "text-xl font-bold text-red-500 mt-2";
+                labelElement.innerText = "خطأ في الطول";
+                return;
+            }
+            if (weight < 2 || weight > 500) {
+                resultElement.innerText = "!";
+                classificationElement.innerText = "الرجاء إدخال وزن صحيح بين 2 و 500 كجم";
+                classificationElement.className = "text-xl font-bold text-red-500 mt-2";
+                labelElement.innerText = "خطأ في الوزن";
+                return;
+            }
+            
+            const heightM = heightCm / 100;
+            const bmi = weight / (heightM * heightM);
+            
+            resultElement.innerText = bmi.toFixed(1);
+            
+            let classification = '';
+            let colorClass = '';
+            
+            if (bmi < 18.5) {
+                classification = 'نقص الوزن (النحافة)';
+                colorClass = 'text-blue-500';
+            } else if (bmi >= 18.5 && bmi <= 24.9) {
+                classification = 'الوزن الطبيعي';
+                colorClass = 'text-green-500';
+            } else if (bmi >= 25.0 && bmi <= 29.9) {
+                classification = 'زيادة الوزن';
+                colorClass = 'text-yellow-500';
+            } else if (bmi >= 30.0 && bmi <= 34.9) {
+                classification = 'السمنة - الدرجة الأولى';
+                colorClass = 'text-orange-500';
+            } else if (bmi >= 35.0 && bmi <= 39.9) {
+                classification = 'السمنة - الدرجة الثانية';
+                colorClass = 'text-red-500';
+            } else {
+                classification = 'السمنة المفرطة - الدرجة الثالثة';
+                colorClass = 'text-red-700 font-bold';
+            }
+            
+            classificationElement.innerText = classification;
+            classificationElement.className = 'text-xl font-bold mt-2 ' + colorClass;
+            
+            // Animation
+            resultContainer.classList.add('animate-bounce');
+            setTimeout(() => resultContainer.classList.remove('animate-bounce'), 1000);
+        }
     </script>
 </body>
 </html>
