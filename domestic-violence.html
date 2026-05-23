@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>العنف الأسري | بوصلة صحة المجتمع</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght=300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            teal: '#00BFFF',
+                            'teal-light': '#E0F7FF',
+                            'teal-dark': '#006080',
+                            blue: '#0082AD',
+                            'blue-light': '#00A1D6',
+                            'blue-deep': '#004157',
+                            grey: '#f5f5f5',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Tajawal', sans-serif; }
+        .slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobile-menu.menu-open {
+            max-height: 400px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-white text-slate-800 antialiased selection:bg-purple-100 selection:text-purple-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-medical-teal-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group transition-all">
+                        <div class="bg-medical-teal-light p-2 rounded-lg group-hover:bg-medical-teal transition-colors">
+                            <i data-lucide="compass" class="w-6 h-6 text-medical-teal group-hover:text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold text-medical-teal-dark tracking-tight">بوصلة صحة المجتمع</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="index.html" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الرئيسية
+                    </a>
+                    <a href="index.html#health-topics" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الموضوعات الصحية
+                    </a>
+                    <a href="index.html#social-awareness" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الموضوعات الاجتماعية
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-slate-600 hover:text-medical-teal p-2 focus:outline-none">
+                        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-b border-medical-teal-light">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الرئيسية</a>
+                <a href="index.html#health-topics" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الصحية</a>
+                <a href="index.html#social-awareness" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الاجتماعية</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-purple-50 py-24 border-b border-purple-100 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none bg-gradient-to-br from-purple-100 to-indigo-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 slide-up">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-purple-100 text-purple-700 text-sm font-bold mb-6">الصحة النفسية والمجتمعية</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-purple-900 mb-6 tracking-tight">العنف الأسري</h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed text-right md:text-center font-medium">
+                دليل توعوي شامل حول حماية كيان الأسرة، فهم المخاطر، والعمل المشترك لبناء مجتمع خالٍ من الإيذاء.
+            </p>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            
+            <!-- Quick Navigation Sidebar (Sticky) -->
+            <aside class="hidden lg:block lg:col-span-1">
+                <div class="sticky top-28 space-y-4">
+                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">فهرس المحتوى</h3>
+                    <nav class="flex flex-col gap-2 border-r-2 border-slate-100 pr-4">
+                        <a href="#introduction" class="text-slate-600 hover:text-purple-600 transition-colors py-1 hover:font-medium text-right">مقدمة</a>
+                        <a href="#concept" class="text-slate-600 hover:text-purple-600 transition-colors py-1 hover:font-medium text-right">مفهوم العنف الأسري</a>
+                        <a href="#types" class="text-slate-600 hover:text-purple-600 transition-colors py-1 hover:font-medium text-right">أنواع العنف الأسري</a>
+                        <a href="#causes" class="text-slate-600 hover:text-purple-600 transition-colors py-1 hover:font-medium text-right">أسباب العنف الأسري</a>
+                        <a href="#effects" class="text-slate-600 hover:text-purple-600 transition-colors py-1 hover:font-medium text-right">آثار العنف الأسري</a>
+                        <a href="#prevention" class="text-slate-600 hover:text-purple-600 transition-colors py-1 hover:font-medium text-right">طرق الوقاية</a>
+                        <a href="#resources" class="text-slate-600 hover:text-purple-600 transition-colors py-1 hover:font-medium text-right">المصادر الرسمية</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:col-span-3 space-y-24 text-right">
+                
+                <!-- Introduction -->
+                <section id="introduction" class="slide-up">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-purple-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">مقدمة</h2>
+                    </div>
+                    <div class="prose prose-lg max-w-none text-slate-600 leading-[1.8] space-y-6">
+                        <p class="text-xl font-medium text-slate-800">
+                            يُعد العنف الأسري من المشكلات الاجتماعية والصحية الخطيرة التي تؤثر على استقرار الأسرة والمجتمع، حيث يحدث عندما يقوم أحد أفراد الأسرة بإيذاء فرد آخر جسديًا أو نفسيًا أو لفظيًا أو اقتصاديًا. وقد ينتج هذا العنف عن سوء الفهم، أو الضغوط النفسية والاقتصادية، أو ضعف الوعي والتربية السليمة. ويؤدي العنف الأسري إلى آثار سلبية كبيرة على الضحية والأسرة بأكملها، لذلك يجب التوعية بخطورته والعمل على الحد منه.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Table of Contents / فهرس المحتوى -->
+                <section id="table-of-contents" class="slide-up bg-purple-50/40 p-8 rounded-3xl border border-purple-100">
+                    <div class="flex items-center gap-3 mb-6 border-r-4 border-purple-600 pr-4">
+                        <h2 class="text-2xl font-bold text-slate-900">فهرس المحتوى</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <a href="#introduction" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
+                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
+                                <i data-lucide="book-open" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">مقدمة</span>
+                        </a>
+                        <a href="#concept" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
+                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
+                                <i data-lucide="help-circle" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">مفهوم العنف الأسري</span>
+                        </a>
+                        <a href="#types" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
+                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
+                                <i data-lucide="layout-grid" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">أنواع العنف الأسري</span>
+                        </a>
+                        <a href="#causes" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
+                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
+                                <i data-lucide="alert-triangle" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">أسباب العنف الأسري</span>
+                        </a>
+                        <a href="#effects" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
+                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
+                                <i data-lucide="activity" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">آثار العنف الأسري</span>
+                        </a>
+                        <a href="#prevention" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
+                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
+                                <i data-lucide="shield-check" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">طريقة الوقاية</span>
+                        </a>
+                        <a href="#resources" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group md:col-span-2 lg:col-span-3">
+                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
+                                <i data-lucide="link" class="w-5 h-5"></i>
+                            </div>
+                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">المصادر الرسمية والدولية</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Concept -->
+                <section id="concept" class="slide-up">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-purple-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">مفهوم العنف الأسري</h2>
+                    </div>
+                    <div class="bg-purple-50/50 p-8 rounded-3xl border border-purple-100 shadow-sm leading-[1.8]">
+                        <p class="text-xl text-slate-800 font-medium">
+                            العنف الأسري هو أي سلوك عدواني أو مؤذٍ يحدث داخل الأسرة ويؤدي إلى إلحاق الضرر الجسدي أو النفسي أو الاجتماعي بأحد أفرادها، سواء كان هذا الضرر متعمدًا أو متكررًا.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Types -->
+                <section id="types" class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-purple-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">أنواع العنف الأسري</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Type 1 -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md hover:border-purple-200 transition-colors flex flex-col justify-between">
+                            <div>
+                                <div class="bg-purple-50 p-3 rounded-xl text-purple-600 w-fit mb-6">
+                                    <i data-lucide="shield-alert" class="w-8 h-8"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-4">1- العنف الجسدي</h3>
+                                <p class="text-slate-600 leading-relaxed text-base">ويشمل الضرب والركل والحرق أو استخدام أدوات تؤدي الي الاصابة الجسدية.</p>
+                            </div>
+                        </div>
+
+                        <!-- Type 2 -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md hover:border-purple-200 transition-colors flex flex-col justify-between">
+                            <div>
+                                <div class="bg-purple-50 p-3 rounded-xl text-purple-600 w-fit mb-6">
+                                    <i data-lucide="brain" class="w-8 h-8"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-4">2- العنف النفسي</h3>
+                                <p class="text-slate-600 leading-relaxed text-base">مثل التهديد والاهانة والتخويف والتحقير مما يؤثر علي الحالة النفسية والثقة بالنفس.</p>
+                            </div>
+                        </div>
+
+                        <!-- Type 3 -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md hover:border-purple-200 transition-colors flex flex-col justify-between">
+                            <div>
+                                <div class="bg-purple-50 p-3 rounded-xl text-purple-600 w-fit mb-6">
+                                    <i data-lucide="annoyed" class="w-8 h-8"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-4">3- العنف اللفظي</h3>
+                                <p class="text-slate-600 leading-relaxed text-base">ويتضمن السب والشتم واستخدام الكلمات الجارحة التي تسبب الأذى النفسي.</p>
+                            </div>
+                        </div>
+
+                        <!-- Type 4 -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md hover:border-purple-200 transition-colors flex flex-col justify-between">
+                            <div>
+                                <div class="bg-purple-50 p-3 rounded-xl text-purple-600 w-fit mb-6">
+                                    <i data-lucide="coins" class="w-8 h-8"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-4">4- العنف الاقتصادي</h3>
+                                <p class="text-slate-600 leading-relaxed text-base">ويحدث عندما يُحرم أحد أفراد الأسرة من المال أو الاحتياجات الأساسية أو التحكم الكامل في دخله.</p>
+                            </div>
+                        </div>
+
+                        <!-- Type 5 -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md hover:border-purple-200 transition-colors flex flex-col justify-between md:col-span-2 lg:col-span-1">
+                            <div>
+                                <div class="bg-purple-50 p-3 rounded-xl text-purple-600 w-fit mb-6">
+                                    <i data-lucide="heart-crack" class="w-8 h-8"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-slate-900 mb-4">5- الإهمال</h3>
+                                <p class="text-slate-600 leading-relaxed text-base">ويظهر في عدم توفير الرعاية الصحية أو التعليمية أو العاطفية للأبناء أو كبار السن.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Causes -->
+                <section id="causes" class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-purple-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">أسباب العنف الأسري</h2>
+                    </div>
+                    <div class="bg-purple-50 p-8 md:p-10 rounded-3xl border border-purple-100 shadow-sm">
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-700 font-semibold text-lg">
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="arrow-left-circle" class="w-6 h-6 text-purple-600 shrink-0"></i> 
+                                <span>الضغوط الاقتصادية والفقر</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="arrow-left-circle" class="w-6 h-6 text-purple-600 shrink-0"></i> 
+                                <span>ضعف الوعي الديني والأخلاقي</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="arrow-left-circle" class="w-6 h-6 text-purple-600 shrink-0"></i> 
+                                <span>تعاطي المخدرات أو الكحول</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="arrow-left-circle" class="w-6 h-6 text-purple-600 shrink-0"></i> 
+                                <span>التفكك الأسري والخلافات الزوجية</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="arrow-left-circle" class="w-6 h-6 text-purple-600 shrink-0"></i> 
+                                <span>التعرض للعنف في مرحلة الطفولة</span>
+                            </li>
+                            <li class="flex items-center gap-3">
+                                <i data-lucide="arrow-left-circle" class="w-6 h-6 text-purple-600 shrink-0"></i> 
+                                <span>الغضب وعدم القدرة على التحكم في الانفعالات</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Effects -->
+                <section id="effects" class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-purple-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900 font-primary">آثار العنف الأسري</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                        <!-- On the Individual -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-xl space-y-6">
+                            <div class="flex items-center gap-3 text-purple-700">
+                                <div class="bg-purple-50 p-3 rounded-xl shrink-0"><i data-lucide="user" class="w-7 h-7"></i></div>
+                                <h3 class="text-2xl font-bold">على الفرد</h3>
+                            </div>
+                            <ul class="space-y-4 text-slate-600 font-semibold text-base py-2">
+                                <li class="flex gap-3">
+                                    <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 shrink-0"></span>
+                                    <span>القلق والاكتئاب والخوف.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 shrink-0"></span>
+                                    <span>انخفاض الثقة بالنفس.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 shrink-0"></span>
+                                    <span>الإصابات الجسدية.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 shrink-0"></span>
+                                    <span>ضعف التحصيل الدراسي عند الأطفال.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- On family and society -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-xl space-y-6">
+                            <div class="flex items-center gap-3 text-purple-700">
+                                <div class="bg-purple-50 p-3 rounded-xl shrink-0"><i data-lucide="users" class="w-7 h-7"></i></div>
+                                <h3 class="text-2xl font-bold">على الأسرة والمجتمع</h3>
+                            </div>
+                            <ul class="space-y-4 text-slate-600 font-semibold text-base py-2">
+                                <li class="flex gap-3">
+                                    <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 shrink-0"></span>
+                                    <span>زيادة التفكك الأسري.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 shrink-0"></span>
+                                    <span>انتشار السلوك العدواني.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 shrink-0"></span>
+                                    <span>ضعف الترابط الاجتماعي.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="w-1.5 h-1.5 bg-purple-600 rounded-full mt-2 shrink-0"></span>
+                                    <span>زيادة المشكلات النفسية والاجتماعية.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Prevention -->
+                <section id="prevention" class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-purple-600 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">طرق الوقاية من العنف الأسري</h2>
+                    </div>
+                    <div class="bg-slate-50 p-8 md:p-10 rounded-3xl border border-slate-200">
+                        <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-700 font-semibold text-lg">
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-emerald-600 shrink-0"></i> 
+                                <span>نشر الوعي والثقافة الأسرية السليمة.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-emerald-600 shrink-0"></i> 
+                                <span>تعزيز الحوار والتفاهم بين أفراد الأسرة.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-emerald-600 shrink-0"></i> 
+                                <span>تقديم الدعم النفسي والاجتماعي للمحتاجين.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-emerald-600 shrink-0"></i> 
+                                <span>تربية الأبناء على الاحترام والتسامح.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-emerald-600 shrink-0"></i> 
+                                <span>تطبيق القوانين التي تحمي ضحايا العنف.</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i data-lucide="shield-check" class="w-6 h-6 text-emerald-600 shrink-0"></i> 
+                                <span>اللجوء إلى الإرشاد الأسري عند حدوث المشكلات.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Resources link -->
+                <section id="resources" class="slide-up">
+                    <div class="bg-gradient-to-l from-purple-900 to-indigo-950 rounded-3xl p-10 text-white relative overflow-hidden shadow-2xl">
+                        <div class="absolute -top-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+                        <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
+                            <div class="space-y-4">
+                                <h3 class="text-2xl font-bold mb-2 flex items-center gap-3">
+                                    <i data-lucide="link" class="text-purple-400"></i>
+                                    المصادر الرسمية والدولية
+                                </h3>
+                                <p class="text-slate-300 leading-relaxed font-semibold">
+                                    لمزيد من المعلومات حول مكافحة العنف الأسري وأثاره النفسية والاجتماعية، يمكنكم زيارة الصفحة الرسمية لمنظمة الصحة العالمية.
+                                </p>
+                            </div>
+                            <a href="https://www.emro.who.int/ar/violence-injuries-disabilities/violence" 
+                               target="_blank" 
+                               class="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-xl font-bold shadow-lg transition-all flex items-center gap-2 shrink-0 group">
+                                زيارة موقع منظمة الصحة العالمية
+                                <i data-lucide="external-link" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-medical-grey border-t border-slate-200 pt-20 pb-10 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16 text-right">
+                <!-- Branding -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2 justify-start">
+                        <div class="bg-medical-teal-light p-2 rounded-md"><i data-lucide="compass" class="w-5 h-5 text-medical-teal"></i></div>
+                        <span class="text-xl font-bold text-medical-teal-dark">بوصلة صحة المجتمع</span>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed max-w-sm">
+                        منصة توعوية شاملة تهدف إلى نشر الوعي الصحي والاجتماعي الصحيح وتمكين الأفراد من بناء حياة متوازنة ومستقرة.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-6 text-right">
+                    <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">روابط سريعة</h3>
+                    <ul class="space-y-4 text-slate-600 font-medium">
+                        <li><a href="index.html" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الرئيسية</a></li>
+                        <li><a href="index.html#health-topics" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الصحية</a></li>
+                        <li><a href="index.html#social-awareness" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الاجتماعية</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="space-y-6 text-right font-medium">
+                    <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">تواصل معنا</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-5 h-5 text-medical-teal"></i></div>
+                            <span>Example@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 relative flex items-center justify-center shrink-0">
+                                <i data-lucide="message-circle" class="w-5 h-5 text-medical-teal"></i>
+                                <i data-lucide="phone" class="w-2.5 h-2.5 text-medical-teal absolute" style="transform: translateY(-1px);"></i>
+                            </div>
+                            <a href="https://wa.me/201050919907" target="_blank" class="hover:text-medical-teal transition-colors" dir="ltr">+20 10 50919907</a>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-medical-teal"></i></div>
+                            <span>جمهورية مصر العربية ، الفيوم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-sm text-slate-500">© 2026 بوصلة صحة المجتمع. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-8 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                    <a href="#" class="hover:text-medical-teal">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-medical-teal">شروط الاستخدام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Responsive Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        let isOpen = false;
+        menuBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            mobileMenu.classList.toggle('menu-open');
+            const icon = menuBtn.querySelector('[data-lucide]');
+            if (icon) {
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        });
+
+        // Close menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('menu-open');
+                isOpen = false;
+                const icon = menuBtn.querySelector('[data-lucide]');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

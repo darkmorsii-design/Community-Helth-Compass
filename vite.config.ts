@@ -2,7 +2,7 @@ import tailwindcss from '@tailwindcss/vite';
 import path from 'path';
 import {defineConfig} from 'vite';
 
-export default defineConfig(({mode}) => {
+export default defineConfig(() => {
   return {
     plugins: [tailwindcss()],
     build: {
@@ -16,6 +16,7 @@ export default defineConfig(({mode}) => {
           cyberbullying: path.resolve(__dirname, 'cyberbullying.html'),
           suicide: path.resolve(__dirname, 'suicide.html'),
           firstaid: path.resolve(__dirname, 'firstaid.html'),
+          'domestic-violence': path.resolve(__dirname, 'domestic-violence.html'),
         },
       },
     },
