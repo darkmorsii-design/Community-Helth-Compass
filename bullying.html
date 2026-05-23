@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل التنمر الشامل | بوصلة صحة المجتمع</title>
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght=300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        medical: {
+                            teal: '#00BFFF',
+                            'teal-light': '#E0F7FF',
+                            'teal-dark': '#006080',
+                            blue: '#0082AD',
+                            'blue-light': '#00A1D6',
+                            'blue-deep': '#004157',
+                            grey: '#f5f5f5',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body, h1, h2, h3, h4, h5, h6, p, span, a, li, button, input, select, textarea { font-family: 'Tajawal', sans-serif !important; }
+        .slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; }
+        @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        
+        #mobile-menu {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        #mobile-menu.menu-open {
+            max-height: 400px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-slate-800 antialiased selection:bg-amber-100 selection:text-amber-900">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-medical-teal-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 group transition-all">
+                        <div class="bg-medical-teal-light p-2 rounded-lg group-hover:bg-medical-teal transition-colors">
+                            <i data-lucide="compass" class="w-6 h-6 text-medical-teal group-hover:text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold text-medical-teal-dark tracking-tight">بوصلة صحة المجتمع</span>
+                    </a>
+                </div>
+
+                <!-- Desktop Links -->
+                <div class="hidden md:flex items-center gap-8 font-medium">
+                    <a href="index.html" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الرئيسية
+                    </a>
+                    <a href="index.html#health-topics" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الموضوعات الصحية
+                    </a>
+                    <a href="index.html#social-awareness" class="text-slate-600 hover:text-medical-teal transition-colors relative group">
+                        الموضوعات الاجتماعية
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" class="text-slate-600 hover:text-medical-teal p-2 focus:outline-none">
+                        <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-b border-medical-teal-light">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="index.html" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الرئيسية</a>
+                <a href="index.html#health-topics" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الصحية</a>
+                <a href="index.html#social-awareness" class="block px-3 py-4 rounded-md text-base font-medium text-slate-600 hover:bg-medical-grey transition-colors">الموضوعات الاجتماعية</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="bg-amber-50 py-24 border-b border-amber-100 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 pointer-events-none bg-gradient-to-br from-amber-100 to-yellow-50"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 slide-up">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-700 text-sm font-bold mb-6">الصحة النفسية والمجتمعية</span>
+            <h1 class="text-4xl md:text-6xl font-bold text-amber-900 mb-6 tracking-tight">دليل التنمر الشامل</h1>
+            <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed text-right md:text-center font-medium">
+                دليل توعوي متكامل لفهم ظاهرة التنمر والوقاية منها، لمجتمع أكثر أماناً وتفهماً.
+            </p>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12">
+            
+            <!-- Quick Navigation Sidebar (Sticky) -->
+            <aside class="hidden lg:block lg:col-span-1 border-l border-slate-100 pl-4">
+                <div class="sticky top-28 space-y-4">
+                    <h3 class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">فهرس المحتوى</h3>
+                    <nav class="flex flex-col gap-2 border-r-2 border-slate-100 pr-4">
+                        <a href="#introduction" class="text-slate-600 hover:text-amber-600 transition-colors py-1 hover:font-medium text-right">أولاً: المقدمة</a>
+                        <a href="#types" class="text-slate-600 hover:text-amber-600 transition-colors py-1 hover:font-medium text-right">ثانياً: أنواع التنمر</a>
+                        <a href="#causes" class="text-slate-600 hover:text-amber-600 transition-colors py-1 hover:font-medium text-right">ثالثاً: أسباب التنمر</a>
+                        <a href="#effects" class="text-slate-600 hover:text-amber-600 transition-colors py-1 hover:font-medium text-right">رابعاً: آثار التنمر</a>
+                        <a href="#prevention" class="text-slate-600 hover:text-amber-600 transition-colors py-1 hover:font-medium text-right">خامساً: الوقاية من التنمر</a>
+                        <a href="#dealing" class="text-slate-600 hover:text-amber-600 transition-colors py-1 hover:font-medium text-right">سادساً: التعامل مع المتنمر</a>
+                        <a href="#recovery" class="text-slate-600 hover:text-amber-600 transition-colors py-1 hover:font-medium text-right">سابعاً: التعافي من التنمر</a>
+                        <a href="#helper" class="text-slate-600 hover:text-amber-600 transition-colors py-1 hover:font-medium text-right">ثامناً: مساعدة الضحية</a>
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <div class="lg:col-span-3 space-y-24 text-right">
+                
+                <!-- Introduction -->
+                <section id="introduction" class="slide-up">
+                    <div class="flex items-center gap-4 mb-8 border-r-4 border-amber-500 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">أولاً: المقدمة</h2>
+                    </div>
+                    <div class="prose prose-lg max-w-none text-slate-600 leading-[1.8] space-y-6">
+                        <p class="text-xl font-medium text-slate-800">
+                            التنمر ظاهرة اجتماعية خطيرة تؤثر على ملايين الأطفال والمراهقين حول العالم. لا يُعدّ التنمر مجرد شجار عابر أو خلاف بين الأقران، بل هو سلوك متعمد ومتكرر يهدف إلى إيذاء شخص أضعف جسدياً أو نفسياً أو اجتماعياً.
+                        </p>
+                        <p class="text-lg">
+                            تشير الإحصاءات العالمية إلى أن 1 من كل 5 طلاب يتعرض للتنمر، وأن كثيراً من الضحايا لا يبوحون بما يعانونه خشية عدم التصديق أو الإحراج. لذا، يُعدّ التوعية والتثقيف حول هذه الظاهرة الخطوة الأولى نحو مجتمع أكثر أماناً وانتماءً.
+                        </p>
+                    </div>
+
+                    <div class="bg-amber-50/50 p-8 rounded-3xl border border-amber-100 shadow-sm leading-[1.8] my-8">
+                        <h3 class="text-xl font-bold text-amber-900 mb-3 flex items-center gap-2">
+                            <i data-lucide="info" class="w-6 h-6"></i>
+                            التعريف:
+                        </h3>
+                        <p class="text-lg text-slate-800 font-medium">
+                            التنمر هو أي سلوك عدواني متعمد ومتكرر يحدث في ظل اختلال في موازين القوة، بحيث يكون المتنمر في موضع أقوى من الضحية.
+                        </p>
+                    </div>
+
+                    <!-- 3 Pillars of Bullying -->
+                    <div class="mt-8">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-6">أركان التنمر الثلاثة:</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            <div class="p-6 bg-white border border-slate-100 shadow-sm rounded-2xl">
+                                <span class="block text-amber-600 font-black text-4xl mb-3">01</span>
+                                <h4 class="text-lg font-bold text-slate-900 mb-2">التعمد</h4>
+                                <p class="text-slate-600 text-sm">يحدث بقصد الإيذاء</p>
+                            </div>
+                            <div class="p-6 bg-white border border-slate-100 shadow-sm rounded-2xl">
+                                <span class="block text-amber-600 font-black text-4xl mb-3">02</span>
+                                <h4 class="text-lg font-bold text-slate-900 mb-2">التكرار</h4>
+                                <p class="text-slate-600 text-sm">لا يقتصر على حادثة واحدة</p>
+                            </div>
+                            <div class="p-6 bg-white border border-slate-100 shadow-sm rounded-2xl">
+                                <span class="block text-amber-600 font-black text-4xl mb-3">03</span>
+                                <h4 class="text-lg font-bold text-slate-900 mb-2">اختلال القوة</h4>
+                                <p class="text-slate-600 text-sm">المتنمر يمتلك نفوذاً أو قوة أكبر</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+                <!-- Types -->
+                <section id="types" class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-amber-500 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">ثانياً: أنواع التنمر</h2>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <!-- Type 1 -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md hover:border-amber-200 transition-colors">
+                            <div class="bg-amber-50 p-3 rounded-xl text-amber-600 w-fit mb-6">
+                                <i data-lucide="shield-alert" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">1. التنمر الجسدي</h3>
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                يشمل الضرب، الدفع، الركل، أخذ ممتلكات الآخرين أو إتلافها. هو أكثر أنواع التنمر وضوحاً وأسهلها في الرصد.
+                            </p>
+                            <div class="bg-slate-50 p-3 rounded-xl">
+                                <span class="text-xs font-bold text-amber-800 uppercase block mb-1">أمثلة:</span>
+                                <span class="text-sm text-slate-700">الضرب في الفناء — سرقة الحقيبة — إتلاف الكتب</span>
+                            </div>
+                        </div>
+
+                        <!-- Type 2 -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md hover:border-amber-200 transition-colors">
+                            <div class="bg-amber-50 p-3 rounded-xl text-amber-600 w-fit mb-6">
+                                <i data-lucide="megaphone" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">2. التنمر اللفظي</h3>
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                يشمل الإهانات، الألقاب المسيئة، التهديد، السخرية المستمرة، والتعليقات العنصرية أو التمييزية.
+                            </p>
+                            <div class="bg-slate-50 p-3 rounded-xl">
+                                <span class="text-xs font-bold text-amber-800 uppercase block mb-1">أمثلة:</span>
+                                <span class="text-sm text-slate-700">الاستهزاء بالمظهر — الشتائم المتكررة — التهديد بالأذى</span>
+                            </div>
+                        </div>
+
+                        <!-- Type 3 -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md hover:border-amber-200 transition-colors">
+                            <div class="bg-amber-50 p-3 rounded-xl text-amber-600 w-fit mb-6">
+                                <i data-lucide="users" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">3. التنمر الاجتماعي (العلائقي)</h3>
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                يهدف إلى عزل الضحية وإقصائها من المجموعة، ويشمل نشر الإشاعات، استبعادها من الأنشطة، والتلاعب بعلاقاتها الاجتماعية.
+                            </p>
+                            <div class="bg-slate-50 p-3 rounded-xl">
+                                <span class="text-xs font-bold text-amber-800 uppercase block mb-1">أمثلة:</span>
+                                <span class="text-sm text-slate-700">تجاهل الطفل في الفسحة — نشر أكاذيب عنه — إقناع الآخرين بمقاطعته</span>
+                            </div>
+                        </div>
+
+                        <!-- Type 4 -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md hover:border-amber-200 transition-colors">
+                            <div class="bg-amber-50 p-3 rounded-xl text-amber-600 w-fit mb-6">
+                                <i data-lucide="monitor-off" class="w-8 h-8"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-3">4. التنمر الإلكتروني (السيبراني)</h3>
+                            <p class="text-slate-600 leading-relaxed mb-4">
+                                يحدث عبر وسائل التواصل الاجتماعي، تطبيقات المراسلة، والألعاب الإلكترونية. خطورته تكمن في أنه لا يتوقف عند باب البيت — يصل إلى الضحية في كل مكان وفي أي وقت.
+                            </p>
+                            <div class="bg-slate-50 p-3 rounded-xl">
+                                <span class="text-xs font-bold text-amber-800 uppercase block mb-1">أمثلة:</span>
+                                <span class="text-sm text-slate-700">نشر صور محرجة — رسائل تهديد — إنشاء حسابات وهمية للإيذاء</span>
+                            </div>
+                        </div>
+
+                        <!-- Type 5 -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md hover:border-amber-200 transition-colors md:col-span-2">
+                            <div class="bg-amber-50 p-3 rounded-xl text-amber-600 w-fit mb-4">
+                                <i data-lucide="badge-alert" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-slate-900 mb-2">5. التنمر القائم على التحيز</h3>
+                            <p class="text-slate-600 leading-relaxed">
+                                يستهدف أشخاصاً بسبب هويتهم: الدين، اللون، الجنسية، الإعاقة، أو أي سمة شخصية.
+                            </p>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Causes -->
+                <section id="causes" class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-amber-500 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">ثالثاً: أسباب التنمر</h2>
+                    </div>
+                    
+                    <div class="space-y-10">
+                        <!-- Bully reasons -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-md">
+                            <h3 class="text-2xl font-bold text-amber-900 mb-6 flex items-center gap-2">
+                                <i data-lucide="user-x" class="text-amber-600"></i>
+                                أسباب تتعلق بالمتنمر
+                            </h3>
+                            <ul class="space-y-4 text-slate-600 font-semibold text-base">
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span><strong class="text-slate-800">البيئة الأسرية:</strong> التعرض للعنف أو الإهمال في المنزل يدفع الطفل لتفريغ مشاعره على الآخرين.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span><strong class="text-slate-800">الرغبة في السيطرة والسلطة:</strong> بعض الأطفال يُعوّضون شعورهم بالضعف الداخلي بالتسلط على غيرهم.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span><strong class="text-slate-800">ضغط الأقران:</strong> الرغبة في الانتماء إلى مجموعة تُشجع على السلوك العدواني.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span><strong class="text-slate-800">غياب التعاطف:</strong> ضعف القدرة على فهم مشاعر الآخرين أو الاكتراث بها.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span><strong class="text-slate-800">التعرض للتنمر سابقاً:</strong> من تعرض للإيذاء قد يُعيد إنتاج نفس السلوك.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- School reasons -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-md">
+                            <h3 class="text-2xl font-bold text-amber-900 mb-6 flex items-center gap-2">
+                                <i data-lucide="school" class="text-amber-600"></i>
+                                أسباب تتعلق بالبيئة المدرسية
+                            </h3>
+                            <ul class="space-y-4 text-slate-600 font-semibold text-base">
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>غياب قواعد واضحة وصارمة ضد التنمر.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>ضعف الإشراف في الأماكن المفتوحة كالفناء والممرات.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>تجاهل المعلمين أو إدارة المدرسة لبلاغات الطلاب.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>الثقافة المدرسية التي تُطبّع العدوانية كـ"قوة".</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Society / Media reasons -->
+                        <div class="bg-white p-8 rounded-3xl border border-slate-100 shadow-md">
+                            <h3 class="text-2xl font-bold text-amber-900 mb-6 flex items-center gap-2">
+                                <i data-lucide="globe" class="text-amber-600"></i>
+                                أسباب تتعلق بالمجتمع والإعلام
+                            </h3>
+                            <ul class="space-y-4 text-slate-600 font-semibold text-base">
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>تمجيد العنف والقوة في وسائل الإعلام والألعاب الإلكترونية.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>ضعف التواصل بين الأسرة والمدرسة.</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>الوصمة الاجتماعية التي تمنع الضحايا من الإبلاغ.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Effects -->
+                <section id="effects" class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-amber-500 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">رابعاً: آثار التنمر</h2>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        
+                        <!-- On Victim -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md">
+                            <h3 class="text-xl font-bold text-red-700 mb-6 flex items-center gap-2">
+                                <i data-lucide="frown" class="w-6 h-6"></i>
+                                على الضحية
+                            </h3>
+                            <div class="space-y-6">
+                                <div>
+                                    <h4 class="font-bold text-sm text-slate-900 mb-2">نفسياً:</h4>
+                                    <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
+                                        <li>القلق المزمن والاكتئاب</li>
+                                        <li>تدني مفهوم الذات وانعدام الثقة بالنفس</li>
+                                        <li>الشعور الدائم بالخوف وعدم الأمان</li>
+                                        <li>في الحالات الشديدة: أفكار إيذاء النفس</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-slate-900 mb-2">أكاديمياً:</h4>
+                                    <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
+                                        <li>تراجع ملحوظ في التحصيل الدراسي</li>
+                                        <li>التغيب المتكرر عن المدرسة</li>
+                                        <li>فقدان التركيز والحافز للتعلم</li>
+                                        <li>كراهية البيئة التعليمية</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-slate-900 mb-2">اجتماعياً:</h4>
+                                    <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
+                                        <li>الانسحاب والعزلة</li>
+                                        <li>صعوبة بناء صداقات حقيقية لاحقاً</li>
+                                        <li>فقدان الثقة بالآخرين بشكل عام</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- On Bully -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md">
+                            <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+                                <i data-lucide="angry" class="w-6 h-6"></i>
+                                على المتنمر
+                            </h3>
+                            <ul class="space-y-4 text-slate-600 text-sm font-semibold">
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>ارتفاع احتمالية الانخراط في سلوكيات منحرفة لاحقاً.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>صعوبة في بناء علاقات صحية ومستدامة.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>ضعف المهارات الاجتماعية الإيجابية.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- On Witnesses -->
+                        <div class="bg-white p-8 rounded-2xl border border-slate-100 shadow-md md:col-span-2 lg:col-span-1">
+                            <h3 class="text-xl font-bold text-slate-800 mb-6 flex items-center gap-2">
+                                <i data-lucide="eye" class="w-6 h-6"></i>
+                                على الشهود والمحيطين
+                            </h3>
+                            <ul class="space-y-4 text-slate-600 text-sm font-semibold">
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>القلق والشعور بالذنب لعدم التدخل.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>التطبيع مع العنف كأمر مقبول.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 bg-amber-500 rounded-full mt-2 shrink-0"></span>
+                                    <span>الخوف من أن يصبحوا الضحية التالية.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </section>
+
+                <!-- Prevention -->
+                <section id="prevention" class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-amber-500 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">خامساً: كيفية الوقاية من التنمر</h2>
+                    </div>
+
+                    <div class="space-y-10">
+                        <!-- Family role -->
+                        <div class="bg-amber-50/30 p-8 rounded-3xl border border-amber-100">
+                            <h3 class="text-2xl font-bold text-amber-900 mb-6 flex items-center gap-3">
+                                <i data-lucide="home" class="text-amber-600"></i>
+                                دور الأسرة
+                            </h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-755 font-semibold text-base">
+                                <li class="flex gap-3">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>تحدث بانتظام مع أطفالك عن يومهم المدرسي — ليس فقط عن الدراسة.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>علّم أطفالك الفرق بين التبليغ والوشاية — التبليغ إنقاذٌ لا ضعف.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>نمّ في الطفل الثقة بالنفس والحزم دون عدوانية.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>كن قدوة في كيفية حل النزاعات وإدارة الخلافات بهدوء.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>تواصل مع المدرسة بصفة منتظمة ولا تنتظر المشكلة لتتصل.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- School role -->
+                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                                <i data-lucide="graduation-cap" class="text-amber-600"></i>
+                                دور المدرسة
+                            </h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700 font-semibold text-base">
+                                <li class="flex gap-3">
+                                    <i data-lucide="check-square" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>اعتماد سياسة صفر تسامح مع التنمر بشكل واضح ومكتوب.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i data-lucide="check-square" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>تدريب المعلمين على رصد مؤشرات التنمر والتعامل معها.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i data-lucide="check-square" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>إنشاء قنوات تبليغ آمنة وسرية يشعر فيها الطالب بالأمان.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i data-lucide="check-square" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>إدراج برامج التوعية والتعاطف ضمن المنهج أو الأنشطة.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i data-lucide="check-square" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>تفعيل دور المرشد الطلابي كجسر بين الطالب والإدارة.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Society role -->
+                        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200">
+                            <h3 class="text-2xl font-bold text-slate-900 mb-6 flex items-center gap-3">
+                                <i data-lucide="users" class="text-amber-600"></i>
+                                دور المجتمع
+                            </h3>
+                            <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-slate-700 font-semibold text-base">
+                                <li class="flex gap-3">
+                                    <i data-lucide="heart-handshake" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>رفع الوعي عبر الحملات الإعلامية والمجتمعية.</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <i data-lucide="heart-handshake" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>دعم برامج الصحة النفسية للأطفال والمراهقين.</span>
+                                </li>
+                                <li class="flex gap-3 lg:col-span-2">
+                                    <i data-lucide="heart-handshake" class="w-5 h-5 text-amber-600 shrink-0 mt-0.5"></i>
+                                    <span>تشجيع ثقافة الإبلاغ وكسر الصمت.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- How to deal with the bully -->
+                <section id="dealing" class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-amber-500 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">سادساً: كيفية التعامل مع المتنمر</h2>
+                    </div>
+
+                    <div class="bg-amber-50/20 p-8 rounded-3xl border border-amber-100 space-y-8">
+                        <p class="text-lg font-bold text-slate-800">إذا تعرضت للتنمر، جرّب هذه الخطوات:</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                                <h4 class="font-bold text-amber-900 text-lg mb-2">١. لا تردّ بالمثل</h4>
+                                <p class="text-slate-600 text-sm">الرد بالعنف يُصعّد الموقف ويجعلك في موضع المخطئ. ابقَ هادئاً قدر الإمكان.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                                <h4 class="font-bold text-amber-900 text-lg mb-2">٢. أظهر ثقتك بنفسك</h4>
+                                <p class="text-slate-600 text-sm">المتنمر يبحث عن ردة فعل. المشي بثقة وتجاهل استفزازاته يُقلل من متعته في الإيذاء.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                                <h4 class="font-bold text-amber-900 text-lg mb-2">٣. قل "لا" بحزم ثم ابتعد</h4>
+                                <p class="text-slate-600 text-sm">جملة بسيطة مثل "هذا غير مقبول" ثم الابتعاد تُرسل رسالة واضحة دون تصعيد.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                                <h4 class="font-bold text-amber-900 text-lg mb-2">٤. ابتعد عن الأماكن المعزولة</h4>
+                                <p class="text-slate-600 text-sm">كن دائماً في أماكن بها أشخاص آخرون — المتنمر يختار ضحاياه عادة حين لا يكون هناك شهود.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                                <h4 class="font-bold text-amber-900 text-lg mb-2">٥. أبلغ شخصاً بالغاً تثق به</h4>
+                                <p class="text-slate-600 text-sm">معلم، مرشد، والد — التبليغ ليس جبناً، بل هو خطوة شجاعة وصحيحة.</p>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-slate-100 shadow-sm">
+                                <h4 class="font-bold text-amber-900 text-lg mb-2">٦. وثّق ما يحدث</h4>
+                                <p class="text-slate-600 text-sm">خاصة في حالة التنمر الإلكتروني — احفظ الرسائل والصور كأدلة قبل حذفها.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recovery -->
+                <section id="recovery" class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-amber-500 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">سابعاً: كيفية التعافي من التنمر</h2>
+                    </div>
+
+                    <div class="bg-white p-8 md:p-10 rounded-3xl border border-slate-100 shadow-lg space-y-6">
+                        <p class="text-lg font-bold text-slate-800 border-b border-rose-100 pb-4">
+                            التعافي رحلة وليس حدثاً واحداً، وهو ممكن تماماً مع الدعم الصحيح.
+                        </p>
+
+                        <div class="space-y-6">
+                            <!-- step 1 -->
+                            <div class="flex items-start gap-4">
+                                <div class="bg-amber-100 text-amber-800 font-bold p-3 rounded-full shrink-0 w-10 h-10 flex items-center justify-center text-sm">١</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg mb-1">اعترف بمشاعرك</h4>
+                                    <p class="text-slate-600">ما تشعر به من ألم أو غضب أو حزن هو طبيعي تماماً. لا تُحاول إخفاء هذه المشاعر أو تجاهلها — أعطِها حقها.</p>
+                                </div>
+                            </div>
+
+                            <!-- step 2 -->
+                            <div class="flex items-start gap-4">
+                                <div class="bg-amber-100 text-amber-800 font-bold p-3 rounded-full shrink-0 w-10 h-10 flex items-center justify-center text-sm">٢</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg mb-1">تحدث مع شخص تثق به</h4>
+                                    <p class="text-slate-600">سواء كان أحد الوالدين، صديقاً مقرباً، أو مرشداً نفسياً — الكلام يُخفف العبء ويفتح الباب للحلول.</p>
+                                </div>
+                            </div>
+
+                            <!-- step 3 -->
+                            <div class="flex items-start gap-4">
+                                <div class="bg-amber-100 text-amber-800 font-bold p-3 rounded-full shrink-0 w-10 h-10 flex items-center justify-center text-sm">٣</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg mb-1">لا تحمّل نفسك المسؤولية</h4>
+                                    <p class="text-slate-600">التنمر لم يحدث لأن فيك خللاً — بل لأن المتنمر يحمل مشكلات ومشاعر داخلية يُفرّغها عليك بطريقة خاطئة.</p>
+                                </div>
+                            </div>
+
+                            <!-- step 4 -->
+                            <div class="flex items-start gap-4">
+                                <div class="bg-amber-100 text-amber-800 font-bold p-3 rounded-full shrink-0 w-10 h-10 flex items-center justify-center text-sm">٤</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg mb-1">استعد ثقتك بنفسك تدريجياً</h4>
+                                    <p class="text-slate-600">انخرط في نشاط تحبه — رياضة، فن، موسيقى، تطوع. إعادة بناء الثقة تبدأ من الإحساس بالإنجاز والانتماء.</p>
+                                </div>
+                            </div>
+
+                            <!-- step 5 -->
+                            <div class="flex items-start gap-4">
+                                <div class="bg-amber-100 text-amber-800 font-bold p-3 rounded-full shrink-0 w-10 h-10 flex items-center justify-center text-sm">٥</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg mb-1">اطلب الدعم المتخصص عند الحاجة</h4>
+                                    <p class="text-slate-600">إذا كانت المشاعر السلبية مستمرة أو شديدة، فإن التحدث مع معالج نفسي ليس ترفاً بل ضرورة.</p>
+                                </div>
+                            </div>
+
+                            <!-- step 6 -->
+                            <div class="flex items-start gap-4">
+                                <div class="bg-amber-100 text-amber-800 font-bold p-3 rounded-full shrink-0 w-10 h-10 flex items-center justify-center text-sm">٦</div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-lg mb-1">ذكّر نفسك أن هذه المرحلة ستمر</h4>
+                                    <p class="text-slate-600">كثير من الذين مروا بتجارب تنمر قاسية أصبحوا يوماً أشخاصاً ناجحين ومتوازنين — التنمر لا يحدد مستقبلك.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Helping others -->
+                <section id="helper" class="slide-up">
+                    <div class="flex items-center gap-4 mb-10 border-r-4 border-amber-500 pr-6">
+                        <h2 class="text-3xl font-bold text-slate-900">ثامناً: كيفية مساعدة من تعرّض للتنمر</h2>
+                    </div>
+
+                    <div class="bg-slate-50 p-8 md:p-10 rounded-3xl border border-slate-200">
+                        <p class="text-lg font-bold text-slate-800 mb-8">إذا كنت صديقاً أو أحد أفراد الأسرة أو معلماً:</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            
+                            <!-- item 1 -->
+                            <div class="flex gap-4">
+                                <div class="bg-white p-3 rounded-xl border border-slate-200 shrink-0 shadow-sm w-12 h-12 flex items-center justify-center text-amber-600">
+                                    <i data-lucide="mic" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-950 text-base mb-1">١. أنصت أولاً — لا توجّه</h4>
+                                    <p class="text-slate-600 text-sm">دع الشخص يُعبّر عما يشعر به دون أن تتسرع في تقديم الحلول أو تقليل ما مرّ به بعبارات مثل "هذا شيء بسيط".</p>
+                                </div>
+                            </div>
+
+                            <!-- item 2 -->
+                            <div class="flex gap-4">
+                                <div class="bg-white p-3 rounded-xl border border-slate-200 shrink-0 shadow-sm w-12 h-12 flex items-center justify-center text-amber-600">
+                                    <i data-lucide="check" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-950 text-base mb-1">٢. صدّقه</h4>
+                                    <p class="text-slate-600 text-sm">أحياناً الضحايا لا يُبلّغون لأنهم يخشون ألّا يُصدَّقوا. قول "أنا أصدقك وأنا هنا" يُحدث فارقاً ضخماً.</p>
+                                </div>
+                            </div>
+
+                            <!-- item 3 -->
+                            <div class="flex gap-4">
+                                <div class="bg-white p-3 rounded-xl border border-slate-200 shrink-0 shadow-sm w-12 h-12 flex items-center justify-center text-amber-600">
+                                    <i data-lucide="shield" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-950 text-base mb-1">٣. لا تضغط عليه للانتقام</h4>
+                                    <p class="text-slate-600 text-sm">التشجيع على الرد بالمثل قد يُفاقم الوضع — ساعده بدلاً من ذلك على إيجاد حلول آمنة وفعّالة.</p>
+                                </div>
+                            </div>
+
+                            <!-- item 4 -->
+                            <div class="flex gap-4">
+                                <div class="bg-white p-3 rounded-xl border border-slate-200 shrink-0 shadow-sm w-12 h-12 flex items-center justify-center text-amber-600">
+                                    <i data-lucide="landmark" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-950 text-base mb-1">٤. رافقه إلى الجهات المختصة</h4>
+                                    <p class="text-slate-600 text-sm">إذا كان طفلاً، ساعده في إخبار إدارة المدرسة أو مرشد طلابي. وإذا لزم الأمر، كن معه في هذا الاجتماع.</p>
+                                </div>
+                            </div>
+
+                            <!-- item 5 -->
+                            <div class="flex gap-4">
+                                <div class="bg-white p-3 rounded-xl border border-slate-200 shrink-0 shadow-sm w-12 h-12 flex items-center justify-center text-amber-600">
+                                    <i data-lucide="heart" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-950 text-base mb-1">٥. ابقَ على تواصل معه</h4>
+                                    <p class="text-slate-600 text-sm">التعافي يحتاج وقتاً. تفقّده بصفة منتظمة واسأل عن أحواله — هذا الاهتمام المستمر يُشعره بأنه ليس وحيداً.</p>
+                                </div>
+                            </div>
+
+                            <!-- item 6 -->
+                            <div class="flex gap-4">
+                                <div class="bg-white p-3 rounded-xl border border-slate-200 shrink-0 shadow-sm w-12 h-12 flex items-center justify-center text-amber-600">
+                                    <i data-lucide="badge-alert" class="w-6 h-6"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-950 text-base mb-1">٦. راقب علامات التدهور النفسي</h4>
+                                    <p class="text-slate-600 text-sm">إذا لاحظت عزلة شديدة، تراجعاً في الأكل والنوم، أو أي إشارة تدل على أفكار إيذاء النفس — اطلب المساعدة المتخصصة فوراً ولا تتردد.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Conclusion / خلاصة -->
+                <section id="conclusion" class="slide-up">
+                    <div class="bg-gradient-to-l from-amber-700 to-amber-950 rounded-3xl p-10 text-white relative overflow-hidden shadow-2xl">
+                        <div class="absolute -top-20 -left-20 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+                        <div class="relative z-10 space-y-4">
+                            <h3 class="text-2xl font-bold mb-2 flex items-center gap-3">
+                                <i data-lucide="award" class="text-amber-300"></i>
+                                خلاصة
+                            </h3>
+                            <p class="text-slate-200 leading-[1.8] font-semibold text-lg">
+                                التنمر ظاهرة يمكن التصدي لها — لكنها تتطلب عملاً جماعياً من الأسرة والمدرسة والمجتمع. الصمت هو أفضل حليف للمتنمر، والكلام هو أول خطوة في الحل.
+                            </p>
+                            <div class="border-t border-white/10 pt-4 mt-4">
+                                <p class="text-xl font-bold text-amber-300">
+                                    تذكّر: إذا رأيت تنمراً ولم تتصرف، فأنت جزء من المشكلة. وإذا تصرفت، أصبحت جزءاً من الحل.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-medical-grey border-t border-slate-200 pt-20 pb-10 scroll-mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-16 text-right">
+                <!-- Branding -->
+                <div class="space-y-6">
+                    <div class="flex items-center gap-2 justify-start">
+                        <div class="bg-medical-teal-light p-2 rounded-md"><i data-lucide="compass" class="w-5 h-5 text-medical-teal"></i></div>
+                        <span class="text-xl font-bold text-medical-teal-dark">بوصلة صحة المجتمع</span>
+                    </div>
+                    <p class="text-slate-600 leading-relaxed max-w-sm">
+                        منصة توعوية شاملة تهدف إلى نشر الوعي الصحي والاجتماعي الصحيح وتمكين الأفراد من بناء حياة متوازنة ومستقرة.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="space-y-6 text-right">
+                    <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">روابط سريعة</h3>
+                    <ul class="space-y-4 text-slate-600 font-medium">
+                        <li><a href="index.html" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الرئيسية</a></li>
+                        <li><a href="index.html#health-topics" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الصحية</a></li>
+                        <li><a href="index.html#social-awareness" class="hover:text-medical-teal transition-colors flex items-center gap-2"><i data-lucide="chevron-left" class="w-4 h-4"></i> الموضوعات الاجتماعية</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div class="space-y-6 text-right font-medium">
+                    <h3 class="text-medical-teal-dark font-bold text-sm uppercase tracking-widest">تواصل معنا</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="mail" class="w-5 h-5 text-medical-teal"></i></div>
+                            <span>Example@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 relative flex items-center justify-center shrink-0">
+                                <i data-lucide="message-circle" class="w-5 h-5 text-medical-teal"></i>
+                                <i data-lucide="phone" class="w-2.5 h-2.5 text-medical-teal absolute" style="transform: translateY(-1px);"></i>
+                            </div>
+                            <a href="https://wa.me/201050919907" target="_blank" class="hover:text-medical-teal transition-colors" dir="ltr">+20 10 50919907</a>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-600">
+                            <div class="bg-white w-10 h-10 rounded-md shadow-sm border border-slate-100 flex items-center justify-center shrink-0"><i data-lucide="map-pin" class="w-5 h-5 text-medical-teal"></i></div>
+                            <span>جمهورية مصر العربية ، الفيوم</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-200 pt-10 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-sm text-slate-500">© 2026 بوصلة صحة المجتمع. جميع الحقوق محفوظة.</p>
+                <div class="flex gap-8 text-xs font-bold text-slate-400 uppercase tracking-widest">
+                    <a href="#" class="hover:text-medical-teal">سياسة الخصوصية</a>
+                    <a href="#" class="hover:text-medical-teal">شروط الاستخدام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Responsive Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        let isOpen = false;
+        menuBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            mobileMenu.classList.toggle('menu-open');
+            const icon = menuBtn.querySelector('[data-lucide]');
+            if (icon) {
+                icon.setAttribute('data-lucide', isOpen ? 'x' : 'menu');
+                lucide.createIcons();
+            }
+        });
+
+        // Close menu when a link is clicked
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('menu-open');
+                isOpen = false;
+                const icon = menuBtn.querySelector('[data-lucide]');
+                if (icon) {
+                    icon.setAttribute('data-lucide', 'menu');
+                    lucide.createIcons();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

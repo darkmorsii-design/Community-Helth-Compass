@@ -17,6 +17,7 @@ export default defineConfig(() => {
           suicide: path.resolve(__dirname, 'suicide.html'),
           firstaid: path.resolve(__dirname, 'firstaid.html'),
           'domestic-violence': path.resolve(__dirname, 'domestic-violence.html'),
+          bullying: path.resolve(__dirname, 'bullying.html'),
         },
       },
     },

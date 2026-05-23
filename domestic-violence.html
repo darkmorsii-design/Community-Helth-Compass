@@ -33,7 +33,7 @@
         }
     </script>
     <style>
-        body { font-family: 'Tajawal', sans-serif; }
+        body, h1, h2, h3, h4, h5, h6, p, span, a, li, button, input, select, textarea { font-family: 'Tajawal', sans-serif !important; }
         .slide-up { animation: slideUp 0.8s ease-out forwards; opacity: 0; }
         @keyframes slideUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
         
@@ -49,7 +49,7 @@
         }
     </style>
 </head>
-<body class="bg-white text-slate-800 antialiased selection:bg-purple-100 selection:text-purple-900">
+<body class="font-sans bg-white text-slate-800 antialiased selection:bg-purple-100 selection:text-purple-900">
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-medical-teal-light">
@@ -142,56 +142,6 @@
                     </div>
                 </section>
 
-                <!-- Table of Contents / فهرس المحتوى -->
-                <section id="table-of-contents" class="slide-up bg-purple-50/40 p-8 rounded-3xl border border-purple-100">
-                    <div class="flex items-center gap-3 mb-6 border-r-4 border-purple-600 pr-4">
-                        <h2 class="text-2xl font-bold text-slate-900">فهرس المحتوى</h2>
-                    </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="#introduction" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
-                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
-                                <i data-lucide="book-open" class="w-5 h-5"></i>
-                            </div>
-                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">مقدمة</span>
-                        </a>
-                        <a href="#concept" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
-                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
-                                <i data-lucide="help-circle" class="w-5 h-5"></i>
-                            </div>
-                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">مفهوم العنف الأسري</span>
-                        </a>
-                        <a href="#types" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
-                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
-                                <i data-lucide="layout-grid" class="w-5 h-5"></i>
-                            </div>
-                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">أنواع العنف الأسري</span>
-                        </a>
-                        <a href="#causes" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
-                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
-                                <i data-lucide="alert-triangle" class="w-5 h-5"></i>
-                            </div>
-                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">أسباب العنف الأسري</span>
-                        </a>
-                        <a href="#effects" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
-                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
-                                <i data-lucide="activity" class="w-5 h-5"></i>
-                            </div>
-                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">آثار العنف الأسري</span>
-                        </a>
-                        <a href="#prevention" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group">
-                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
-                                <i data-lucide="shield-check" class="w-5 h-5"></i>
-                            </div>
-                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">طريقة الوقاية</span>
-                        </a>
-                        <a href="#resources" class="flex items-center gap-3 bg-white p-4 rounded-xl border border-slate-100 hover:border-purple-300 hover:shadow-sm transition-all group md:col-span-2 lg:col-span-3">
-                            <div class="bg-purple-50 p-2.5 rounded-lg text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all shrink-0">
-                                <i data-lucide="link" class="w-5 h-5"></i>
-                            </div>
-                            <span class="font-bold text-slate-700 group-hover:text-purple-700 transition-colors text-right">المصادر الرسمية والدولية</span>
-                        </a>
-                    </div>
-                </section>
 
                 <!-- Concept -->
                 <section id="concept" class="slide-up">
@@ -306,7 +256,7 @@
                 <!-- Effects -->
                 <section id="effects" class="slide-up">
                     <div class="flex items-center gap-4 mb-10 border-r-4 border-purple-600 pr-6">
-                        <h2 class="text-3xl font-bold text-slate-900 font-primary">آثار العنف الأسري</h2>
+                        <h2 class="text-3xl font-bold text-slate-900">آثار العنف الأسري</h2>
                     </div>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <!-- On the Individual -->
