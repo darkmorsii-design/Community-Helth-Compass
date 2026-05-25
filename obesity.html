@@ -572,14 +572,16 @@
 
         <!-- BMI Calculator Section -->
         <section id="bmi-calc" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24 slide-up">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">هيا احسب مؤشر كتلة جسمك الآن</h2>
-                <p class="text-lg text-slate-600 max-w-3xl mx-auto">
-                    يتم قياس السمنة غالبًا باستخدام مؤشر كتلة الجسم (BMI)، وهو مقياس يعتمد على العلاقة بين الوزن والطول. وعندما يصل مؤشر كتلة الجسم إلى 30 أو أكثر يُعتبر الشخص مصابًا بالسمنة.
-                </p>
+            <div class="text-center mb-16 space-y-4">
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6">مؤشر كتلة الجسم</h2>
+                <div class="text-lg text-slate-600 max-w-3xl mx-auto space-y-4">
+                    <p class="font-bold text-slate-800 text-xl">تعرف على وزنك الصحي من خلال مؤشر كتلة الجسم</p>
+                    <p class="leading-relaxed">مؤشر كتلة الجسم ( (BMI) هو صيغة رياضية للتعرف على الوزن الطبيعي للشخص، وهي عبارة عن ناتج قسمة الوزن على مربع الطول بالمتر (كجم/ متر 2) ( يرجى ملاحظة أن مؤشر كتلة الجسم لا يأخذ نسب الدهون).</p>
+                    <p class="text-sm font-semibold text-rose-600 bg-rose-50 border border-rose-100 py-3 px-6 rounded-2xl inline-block mt-2">ملاحظة: يستثنى من هذا الحساب كل من الأطفال أقل من 19 سنة و الحامل والرياضيين.</p>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+            <div class="max-w-3xl mx-auto space-y-12">
                 <!-- Calculator Inputs -->
                 <div class="bg-white p-8 md:p-10 rounded-3xl border border-slate-100 shadow-2xl space-y-8 bmi-card">
                     <div class="text-right">
@@ -602,7 +604,7 @@
                 </div>
 
                 <!-- Classification Table -->
-                <div class="lg:col-span-2 overflow-hidden rounded-3xl border border-slate-100 shadow-xl">
+                <div class="overflow-hidden rounded-3xl border border-slate-100 shadow-xl">
                     <table class="w-full text-right bg-white">
                         <thead class="bg-slate-900 text-white">
                             <tr>
